@@ -1,0 +1,820 @@
+{
+  "config": {
+    "argv": [
+      "/Users/soft4u/.nvm/versions/node/v25.2.1/bin/node",
+      "/Users/soft4u/Development/delivery-flow-e2e/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/soft4u/Development/delivery-flow-e2e/playwright.config.ts",
+    "rootDir": "/Users/soft4u/Development/delivery-flow-e2e/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/soft4u/Development/delivery-flow-e2e/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/soft4u/Development/delivery-flow-e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "evidence/results-mutated.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "a11y.spec.ts",
+      "file": "a11y.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-011 every details.more fold is reachable and operable by keyboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-16T15:34:52.395Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3ad05f8c0e05077efb-5512f033c4bd8d1fc5cf",
+          "file": "a11y.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "axe",
+                  "description": "2 violations total; serious/critical: color-contrast(serious,34n), summary-name(serious,22n); baselined open defects still present: color-contrast, summary-name"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-16T15:34:53.949Z",
+                  "annotations": [
+                    {
+                      "type": "axe",
+                      "description": "2 violations total; serious/critical: color-contrast(serious,34n), summary-name(serious,22n); baselined open defects still present: color-contrast, summary-name"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3ad05f8c0e05077efb-d9aef721ece54b27af3b",
+          "file": "a11y.spec.ts",
+          "line": 33,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.ts",
+      "file": "dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Candidate identity and framing",
+          "file": "dashboard.spec.ts",
+          "line": 23,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-001 the demo provenance banner is present",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 333,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:55.680Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-fbfc623bd0a7cf220580",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "UI-002 all ten screens render a verdict sentence",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 601,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:56.022Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-20ac11adcb13bd25f8d5",
+              "file": "dashboard.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "UI-014 every left-rail link resolves to a screen that exists",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 492,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:56.631Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-b428a36a8a624b7c6197",
+              "file": "dashboard.spec.ts",
+              "line": 46,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Verdicts state the absence, not a zero",
+          "file": "dashboard.spec.ts",
+          "line": 81,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-003 Delivery today says none of the landings carries a verdict",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 328,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:57.130Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-f74378bb63671eeef2b6",
+              "file": "dashboard.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "UI-006 Decisions reports 7 mandates with a receipt and 4 refuted",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 290,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:57.466Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-2e5944c2a1f1e8356118",
+              "file": "dashboard.spec.ts",
+              "line": 91,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Readiness blockers are named, not scored",
+          "file": "dashboard.spec.ts",
+          "line": 107,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-005 Business intent shows exactly six blockers with one open conflict",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 382,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:57.763Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-bfb1aa0cc26319cb30b7",
+              "file": "dashboard.spec.ts",
+              "line": 108,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Provenance is carried by every figure",
+          "file": "dashboard.spec.ts",
+          "line": 129,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-007 every dial carries exactly one provenance chip from the vocabulary",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 353,
+                      "error": {
+                        "message": "Error: dial \"Lead time, median: 1.43 h — derived\" must carry exactly one chip\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+                        "stack": "Error: dial \"Lead time, median: 1.43 h — derived\" must carry exactly one chip\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/dashboard.spec.ts:144:79",
+                        "location": {
+                          "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/dashboard.spec.ts",
+                          "column": 79,
+                          "line": 144
+                        },
+                        "snippet": "  142 |     const expectChips = field<number>('UI-007', 'chips_per_dial');\n  143 |     for (const d of perDial) {\n> 144 |       expect(d.chips.length, `dial \"${d.label}\" must carry exactly one chip`).toBe(expectChips);\n      |                                                                               ^\n  145 |       expect(vocabulary, `dial \"${d.label}\" chip \"${d.chips[0]}\" is outside the vocabulary`).toContain(d.chips[0]);\n  146 |     }\n  147 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/dashboard.spec.ts",
+                            "column": 79,
+                            "line": 144
+                          },
+                          "message": "Error: dial \"Lead time, median: 1.43 h — derived\" must carry exactly one chip\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\n  142 |     const expectChips = field<number>('UI-007', 'chips_per_dial');\n  143 |     for (const d of perDial) {\n> 144 |       expect(d.chips.length, `dial \"${d.label}\" must carry exactly one chip`).toBe(expectChips);\n      |                                                                               ^\n  145 |       expect(vocabulary, `dial \"${d.label}\" chip \"${d.chips[0]}\" is outside the vocabulary`).toContain(d.chips[0]);\n  146 |     }\n  147 |   });\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/dashboard.spec.ts:144:79"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:58.151Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/dashboard-Provenance-is-ca-9e24b-ce-chip-from-the-vocabulary-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/dashboard-Provenance-is-ca-9e24b-ce-chip-from-the-vocabulary-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/dashboard-Provenance-is-ca-9e24b-ce-chip-from-the-vocabulary-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/dashboard.spec.ts",
+                        "column": 79,
+                        "line": 144
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-5d74e85c7dc1ee0305d0",
+              "file": "dashboard.spec.ts",
+              "line": 130,
+              "column": 7
+            },
+            {
+              "title": "UI-008 every screen carries at least one chart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 368,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:58.821Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-151597d3e802767ba433",
+              "file": "dashboard.spec.ts",
+              "line": 149,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Interaction",
+          "file": "dashboard.spec.ts",
+          "line": 158,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-009 the trace picker switches the heading and the state line",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1915,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:34:59.312Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4e73bde76b9e55a0dc39",
+              "file": "dashboard.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "UI-010 the theme toggle flips data-theme and returns",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 498,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:35:01.239Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-ad273a300638fcc98822",
+              "file": "dashboard.spec.ts",
+              "line": 182,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Rendering hygiene",
+          "file": "dashboard.spec.ts",
+          "line": 193,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-012 no rendered text leaks undefined or NaN",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 311,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-16T15:35:01.746Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-45060f8ade8778063b32",
+              "file": "dashboard.spec.ts",
+              "line": 194,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "not-assessed.spec.ts",
+      "file": "not-assessed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-004 the Rework share dial reads the literal state, never a number",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10314,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('group', { name: /^Rework share:/ }).locator('.chip')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('group', { name: /^Rework share:/ }).locator('.chip') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: /^Rework share:/ }).locator('.chip')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('group', { name: /^Rework share:/ }).locator('.chip')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('group', { name: /^Rework share:/ }).locator('.chip') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: /^Rework share:/ }).locator('.chip')\u001b[22m\n\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts:32:39",
+                    "location": {
+                      "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
+                      "column": 39,
+                      "line": 32
+                    },
+                    "snippet": "  30 |\n  31 |   // 3. Its provenance chip says the same thing.\n> 32 |   await expect(dial.locator('.chip')).toHaveText(field<string>('UI-004', 'provenance_chip'));\n     |                                       ^\n  33 |\n  34 |   // 4. Explicit negative oracle: none of the zero-shaped renderings is acceptable.\n  35 |   const rendered = ((await value.textContent()) ?? '').trim();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
+                        "column": 39,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('group', { name: /^Rework share:/ }).locator('.chip')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('group', { name: /^Rework share:/ }).locator('.chip') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: /^Rework share:/ }).locator('.chip')\u001b[22m\n\n\n  30 |\n  31 |   // 3. Its provenance chip says the same thing.\n> 32 |   await expect(dial.locator('.chip')).toHaveText(field<string>('UI-004', 'provenance_chip'));\n     |                                       ^\n  33 |\n  34 |   // 4. Explicit negative oracle: none of the zero-shaped renderings is acceptable.\n  35 |   const rendered = ((await value.textContent()) ?? '').trim();\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts:32:39"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-16T15:35:02.072Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
+                    "column": 39,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d51be7c15d3dcdb5fcf8-021a77396862adf2fbc7",
+          "file": "not-assessed.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "UI-013 no not-assessed state badge renders a numeral",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 320,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-16T15:35:12.634Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d51be7c15d3dcdb5fcf8-5bdc04a094c8b1f3ef29",
+          "file": "not-assessed.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "UI-016 the board renders with no third-party network access",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "cannot-assess",
+                  "description": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted."
+                },
+                {
+                  "type": "expectation",
+                  "description": "UI-016"
+                },
+                {
+                  "type": "skip",
+                  "description": "cannot-assess: The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
+                  "location": {
+                    "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
+                    "line": 68,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 327,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-16T15:35:13.056Z",
+                  "annotations": [
+                    {
+                      "type": "cannot-assess",
+                      "description": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted."
+                    },
+                    {
+                      "type": "expectation",
+                      "description": "UI-016"
+                    },
+                    {
+                      "type": "skip",
+                      "description": "cannot-assess: The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
+                      "location": {
+                        "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
+                        "line": 68,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d51be7c15d3dcdb5fcf8-a4e3cf9674cc327cb4c7",
+          "file": "not-assessed.spec.ts",
+          "line": 62,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-16T15:34:51.978Z",
+    "duration": 21448.742000000002,
+    "expected": 13,
+    "skipped": 1,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
