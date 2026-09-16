@@ -1,13 +1,13 @@
 {
   "statement": "Structural validity is not semantic approval. This receipt records what the listed structural checks observed against one candidate at one moment. It does not certify that the figures on the board are correct, that the underlying delivery data is fit for a decision, or that this candidate is approved for release. Business meaning and release authority remain with named humans.",
   "receipt_version": "ui-receipt-1",
-  "generated_at": "2026-09-16T15:37:10.222Z",
+  "generated_at": "2026-09-16T15:45:21.825Z",
   "candidate": {
     "url": "https://s4u-methodology.pages.dev/demo/delivery-flow.html",
     "resolved_url": "https://s4u-methodology.pages.dev/demo/delivery-flow",
     "http_status": 200,
-    "sha256_html": "7da3126db4d732a524378bdf128e910a8a83642f1f32863cb6713cb908f08074",
-    "bytes": 81596,
+    "sha256_html": "da439f75d00e6f378ae99c475ad4bac3d041f0eee78b9051cc95450df7691196",
+    "bytes": 81716,
     "note": "Published candidate fetched over the network at receipt time; the page may change between runs."
   },
   "profile_version": "ui-structural-profile-v1",
@@ -26,11 +26,11 @@
     "browser_channel": "chromium (bundled)",
     "retries_configured": 0,
     "workers": 1,
-    "git_commit": null
+    "git_commit": "8f7dd54d1c58b1a56bd8c5ff2f6a3b0702023fe0"
   },
   "run": {
-    "started_at": "2026-09-16T15:36:57.219Z",
-    "duration_ms": 12359.130000000001,
+    "started_at": "2026-09-16T15:45:07.813Z",
+    "duration_ms": 13216.567,
     "reporter_expected": 15,
     "reporter_unexpected": 0,
     "reporter_skipped": 1,
@@ -50,7 +50,7 @@
       "title": "Demo provenance banner is present",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 471,
+      "duration_ms": 473,
       "bound_test": "UI-001 the demo provenance banner is present"
     },
     {
@@ -60,7 +60,7 @@
       "title": "All ten screens render with a verdict sentence",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 830,
+      "duration_ms": 692,
       "bound_test": "UI-002 all ten screens render a verdict sentence"
     },
     {
@@ -70,7 +70,7 @@
       "title": "Delivery today verdict says none of the landings carries a verdict",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 543,
+      "duration_ms": 381,
       "bound_test": "UI-003 Delivery today says none of the landings carries a verdict"
     },
     {
@@ -80,7 +80,7 @@
       "title": "Rework share dial reads the literal state, never a number",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 361,
+      "duration_ms": 399,
       "bound_test": "UI-004 the Rework share dial reads the literal state, never a number"
     },
     {
@@ -90,7 +90,7 @@
       "title": "Business intent shows exactly six named blockers, one of them an open conflict",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 487,
+      "duration_ms": 373,
       "bound_test": "UI-005 Business intent shows exactly six blockers with one open conflict"
     },
     {
@@ -100,7 +100,7 @@
       "title": "Decisions screen reports 7 mandates with a receipt and 4 refuted",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 459,
+      "duration_ms": 382,
       "bound_test": "UI-006 Decisions reports 7 mandates with a receipt and 4 refuted"
     },
     {
@@ -110,7 +110,7 @@
       "title": "Every dial carries exactly one provenance chip from the approved vocabulary",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 358,
+      "duration_ms": 379,
       "bound_test": "UI-007 every dial carries exactly one provenance chip from the vocabulary"
     },
     {
@@ -120,7 +120,7 @@
       "title": "Every screen carries at least one chart",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 390,
+      "duration_ms": 416,
       "bound_test": "UI-008 every screen carries at least one chart"
     },
     {
@@ -130,7 +130,7 @@
       "title": "Trace picker switches the heading and the state line",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 1930,
+      "duration_ms": 1959,
       "bound_test": "UI-009 the trace picker switches the heading and the state line"
     },
     {
@@ -140,7 +140,7 @@
       "title": "Theme toggle flips data-theme and returns",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 416,
+      "duration_ms": 1114,
       "bound_test": "UI-010 the theme toggle flips data-theme and returns"
     },
     {
@@ -150,7 +150,7 @@
       "title": "Every details.more fold has a summary reachable and operable by keyboard",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 1710,
+      "duration_ms": 1711,
       "bound_test": "UI-011 every details.more fold is reachable and operable by keyboard"
     },
     {
@@ -160,7 +160,7 @@
       "title": "No rendered text leaks undefined or NaN",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 338,
+      "duration_ms": 506,
       "bound_test": "UI-012 no rendered text leaks undefined or NaN"
     },
     {
@@ -170,7 +170,7 @@
       "title": "No not-assessed state badge renders a numeral",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 396,
+      "duration_ms": 373,
       "bound_test": "UI-013 no not-assessed state badge renders a numeral"
     },
     {
@@ -180,7 +180,7 @@
       "title": "Left rail links resolve to the ten screen ids",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 755,
+      "duration_ms": 529,
       "bound_test": "UI-014 every left-rail link resolves to a screen that exists"
     },
     {
@@ -190,7 +190,7 @@
       "title": "Accessibility smoke: no serious or critical axe violations beyond the recorded baseline",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 1526,
+      "duration_ms": 2066,
       "bound_test": "UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline"
     },
     {
@@ -200,7 +200,7 @@
       "title": "Offline resilience: the board renders with no third-party network access",
       "outcome": "cannot-assess",
       "detail": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
-      "duration_ms": 326,
+      "duration_ms": 441,
       "bound_test": "UI-016 the board renders with no third-party network access"
     }
   ],
@@ -212,8 +212,10 @@
       "rule": "color-contrast",
       "impact": "serious",
       "nodes_observed": 34,
-      "status": "open",
-      "note": "Observed on the candidate landing view; not fixed, not waived."
+      "status": "fixed",
+      "note": "Observed on the candidate landing view; not fixed, not waived.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
     },
     {
       "id": "A11Y-002",
@@ -221,8 +223,10 @@
       "rule": "summary-name",
       "impact": "serious",
       "nodes_observed": 22,
-      "status": "open",
-      "note": "details summaries render their label through CSS content, leaving no accessible name for assistive technology."
+      "status": "fixed",
+      "note": "details summaries render their label through CSS content, leaving no accessible name for assistive technology.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
     }
   ],
   "corpus_amendments": [
@@ -239,6 +243,12 @@
         "UI-015"
       ],
       "reason": "Expectation of zero serious/critical axe violations was not met by the candidate. Rather than deleting the check or marking it passed, the two observed violations are recorded as named open defects and baselined, so the gate now detects NEW serious violations. The open defects are carried into every receipt."
+    },
+    {
+      "date": "2026-09-16",
+      "case": "UI-015",
+      "change": "baselined_serious_violations: [color-contrast, summary-name] -> []",
+      "reason": "Both defects were fixed in the candidate (s4u-methodology PR #70, 4161ec2) and verified absent by an axe probe on the live page; a baseline that no longer describes the candidate would let a regression hide behind it."
     }
   ],
   "not_claimed": [

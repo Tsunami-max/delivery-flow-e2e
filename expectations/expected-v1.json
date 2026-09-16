@@ -237,10 +237,8 @@
           "wcag21aa"
         ],
         "max_new_serious_or_critical_violations": 0,
-        "baselined_serious_violations": [
-          "color-contrast",
-          "summary-name"
-        ]
+        "baselined_serious_violations": [],
+        "note": " Baseline emptied 2026-09-16 after A11Y-001/002 were fixed in the candidate; the gate now fails on any serious or critical rule."
       },
       "note": "Amended 2026-09-16 after first observation. The candidate carries two serious axe violations on the landing view: color-contrast (34 nodes) and summary-name (22 nodes, the fold summaries carry their label in CSS content and so have no accessible name). These are OPEN DEFECTS IN THE CANDIDATE, not acceptable behaviour. They are baselined so the gate detects new regressions; they are reported in the receipt as open defects and are not waived."
     },
@@ -270,6 +268,12 @@
         "UI-015"
       ],
       "reason": "Expectation of zero serious/critical axe violations was not met by the candidate. Rather than deleting the check or marking it passed, the two observed violations are recorded as named open defects and baselined, so the gate now detects NEW serious violations. The open defects are carried into every receipt."
+    },
+    {
+      "date": "2026-09-16",
+      "case": "UI-015",
+      "change": "baselined_serious_violations: [color-contrast, summary-name] -> []",
+      "reason": "Both defects were fixed in the candidate (s4u-methodology PR #70, 4161ec2) and verified absent by an axe probe on the live page; a baseline that no longer describes the candidate would let a regression hide behind it."
     }
   ],
   "open_defects": [
@@ -279,8 +283,10 @@
       "rule": "color-contrast",
       "impact": "serious",
       "nodes_observed": 34,
-      "status": "open",
-      "note": "Observed on the candidate landing view; not fixed, not waived."
+      "status": "fixed",
+      "note": "Observed on the candidate landing view; not fixed, not waived.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
     },
     {
       "id": "A11Y-002",
@@ -288,8 +294,10 @@
       "rule": "summary-name",
       "impact": "serious",
       "nodes_observed": 22,
-      "status": "open",
-      "note": "details summaries render their label through CSS content, leaving no accessible name for assistive technology."
+      "status": "fixed",
+      "note": "details summaries render their label through CSS content, leaving no accessible name for assistive technology.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
     }
   ]
 }
