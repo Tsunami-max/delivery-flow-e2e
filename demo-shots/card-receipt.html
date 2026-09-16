@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+    body{margin:0;background:#F5F6F3;padding:28px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif}
+    .card{background:#1A1F1E;border-radius:12px;padding:0;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.12);width:1180px}
+    .bar{background:#242A29;color:#C8CDC9;padding:10px 16px;font-size:14px;display:flex;justify-content:space-between}
+    .bar b{color:#fff;font-weight:600} .bar span.a{color:#B3A3DD}
+    pre{margin:0;padding:18px 20px;color:#E8EBE7;font:13px/1.5 "SF Mono",Menlo,Consolas,monospace;white-space:pre-wrap}
+    .ok{color:#6CBF95} .bad{color:#E07A6C}
+    </style></head><body><div class="card"><div class="bar"><b>evidence/receipt.json — what a run may claim</b><span class="a">structural validity is not semantic approval</span></div><pre>{
+  &quot;statement&quot;: &quot;Structural validity is not semantic approval. This receipt records what the listed structural checks observed against one candidate at one moment. It does not certify that the figures on the board are correct, that the underlying delivery data is fit for a decision, or that this candidate is approved for release. Business meaning and release authority remain with named humans.&quot;,
+  &quot;receipt_version&quot;: &quot;ui-receipt-1&quot;,
+  &quot;generated_at&quot;: &quot;2026-09-16T15:45:21.825Z&quot;,
+  &quot;candidate&quot;: {
+    &quot;url&quot;: &quot;https://s4u-methodology.pages.dev/demo/delivery-flow.html&quot;,
+    &quot;resolved_url&quot;: &quot;https://s4u-methodology.pages.dev/demo/delivery-flow&quot;,
+    &quot;http_status&quot;: 200,
+    &quot;sha256_html&quot;: &quot;da439f75d00e6f378ae99c475ad4bac3d041f0eee78b9051cc95450df7691196&quot;,
+    &quot;bytes&quot;: 81716,
+    &quot;note&quot;: &quot;Published candidate fetched over the network at receipt time; the page may change between runs.&quot;
+  },
+  &quot;profile_version&quot;: &quot;ui-structural-profile-v1&quot;,
+  &quot;corpus&quot;: {
+    &quot;version&quot;: &quot;expected-v1&quot;,
+    &quot;author&quot;: &quot;soft4ubvba@gmail.com (human brief owner)&quot;,
+    &quot;reviewer&quot;: &quot;pending&quot;,
+    &quot;reviewer_note&quot;: &quot;The expected-result corpus has NOT been independently reviewed. Until a named reviewer signs it, these outcomes are self-checked, not independently validated.&quot;,
+    &quot;case_count&quot;: 16
+  },
+  &quot;environment&quot;: {
+    &quot;node&quot;: &quot;v25.2.1&quot;,
+    &quot;platform&quot;: &quot;darwin arm64&quot;,
+    &quot;playwright_test&quot;: &quot;1.63.0&quot;,
+    &quot;browser&quot;: &quot;153.0.8010.12&quot;,
+    &quot;browser_channel&quot;: &quot;chromium (bundled)&quot;,
+    &quot;retries_configured&quot;: 0,
+    &quot;workers&quot;: 1,
+    &quot;git_commit&quot;: &quot;8f7dd54d1c58b1a56bd8c5ff2f6a3b0702023fe0&quot;
+  },
+  &quot;tally&quot;: {
+    &quot;passed&quot;: 15,
+    &quot;failed&quot;: 0,
+    &quot;cannot-assess&quot;: 1,
+    &quot;inapplicable&quot;: 0
+  },
+  &quot;cases (first 4 of 16)&quot;: [
+    {
+      &quot;id&quot;: &quot;UI-001&quot;,
+      &quot;surface&quot;: &quot;UI&quot;,
+      &quot;kind&quot;: &quot;benign&quot;,
+      &quot;title&quot;: &quot;Demo provenance banner is present&quot;,
+      &quot;outcome&quot;: &quot;passed&quot;,
+      &quot;detail&quot;: null,
+      &quot;duration_ms&quot;: 473,
+      &quot;bound_test&quot;: &quot;UI-001 the demo provenance banner is present&quot;
+    },
+    {
+      &quot;id&quot;: &quot;UI-002&quot;,
+      &quot;surface&quot;: &quot;UI&quot;,
+      &quot;kind&quot;: &quot;benign&quot;,
+      &quot;title&quot;: &quot;All ten screens render with a verdict sentence&quot;,
+      &quot;outcome&quot;: &quot;passed&quot;,
+      &quot;detail&quot;: null,
+      &quot;duration_ms&quot;: 692,
+      &quot;bound_test&quot;: &quot;UI-002 all ten screens render a verdict sentence&quot;
+    },
+    {
+      &quot;id&quot;: &quot;UI-003&quot;,
+      &quot;surface&quot;: &quot;UI&quot;,
+      &quot;kind&quot;: &quot;benign&quot;,
+      &quot;title&quot;: &quot;Delivery today verdict says none of the landings carries a verdict&quot;,
+      &quot;outcome&quot;: &quot;passed&quot;,
+      &quot;detail&quot;: null,
+      &quot;duration_ms&quot;: 381,
+      &quot;bound_test&quot;: &quot;UI-003 Delivery today says none of the landings carries a verdict&quot;
+    },
+    {
+      &quot;id&quot;: &quot;UI-004&quot;,
+      &quot;surface&quot;: &quot;UI&quot;,
+      &quot;kind&quot;: &quot;not-assessed&quot;,
+      &quot;title&quot;: &quot;Rework share dial reads the literal state, never a number&quot;,
+      &quot;outcome&quot;: &quot;passed&quot;,
+      &quot;detail&quot;: null,
+      &quot;duration_ms&quot;: 399,
+      &quot;bound_test&quot;: &quot;UI-004 the Rework share dial reads the literal state, never a number&quot;
+    }
+  ],
+  &quot;open_defects_in_candidate&quot;: [
+    {
+      &quot;id&quot;: &quot;A11Y-001&quot;,
+      &quot;surface&quot;: &quot;UI&quot;,
+      &quot;rule&quot;: &quot;color-contrast&quot;,
+      &quot;impact&quot;: &quot;serious&quot;,
+      &quot;nodes_observed&quot;: 34,
+      &quot;status&quot;: &quot;fixed&quot;,
+      &quot;note&quot;: &quot;Observed on the candidate landing view; not fixe</pre></div></body></html>

@@ -17,6 +17,14 @@ const args = Object.fromEntries(
 );
 const mutation = args.mutation ?? 'rework-zero';
 const port = Number(args.port ?? 8787);
+// Preflight: a stale server on this port would make the suite test the wrong candidate
+// (observed 2026-09-16: a server from an earlier session kept serving a pre-fix copy while
+// the new one failed to bind, and the run reported that copy's defects). Refuse, never reuse.
+try {
+  const probe = await fetch(`http://127.0.0.1:${port}/`, { signal: AbortSignal.timeout(1500) });
+  console.error(`BLOCKED: port ${port} already in use (HTTP ${probe.status}); another server is serving an unknown candidate. Stop it first.`);
+  process.exit(3);
+} catch (e) { if (!(e?.cause?.code === 'ECONNREFUSED' || e?.code === 'ECONNREFUSED' || /ECONNREFUSED|fetch failed/.test(String(e)))) throw e; }
 const expectRed = args.expect !== 'green';
 
 const server = spawn(

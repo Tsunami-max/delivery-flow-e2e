@@ -213,3 +213,18 @@ present provenance chip from an absent one, on this candidate, in this browser.
 Does not prove: that the suite would catch any other regression; that the
 figures on the board are correct; that the mutations are representative of real
 defects. Two mutations were run. That is the extent of the evidence.
+
+
+## Re-run after the candidate's accessibility fixes — 2026-09-16 evening
+
+Candidate `da439f75…7691196` (post-fix). Baseline: 15 passed, 1 cannot-assess. Mutation
+`rework-zero`: **1 failed (UI-004), 14 passed, 1 skipped, exit 1** — only the guarding case flipped.
+Restored: green. Real console output in `evidence/figures/run-green.txt` and `run-mutated.txt`;
+rendered as `card-green.png` / `card-mutated.png`.
+
+Incident worth keeping: an earlier run reported two failures on the mutated copy. The second was
+not the mutation — a server from a previous session was still holding port 8787 and serving a
+pre-fix copy of the page, and the new server silently failed to bind. The harness now refuses to
+run when the port is already in use, and the mutation server fetches the candidate uncached.
+A test that runs against the wrong candidate is worse than no test; the receipt binds the digest
+for exactly this reason.

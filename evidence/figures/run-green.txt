@@ -1,0 +1,22 @@
+
+Running 16 tests using 1 worker
+
+  ✓   1 [chromium] › tests/a11y.spec.ts:11:5 › UI-011 every details.more fold is reachable and operable by keyboard (2.3s)
+  ✓   2 [chromium] › tests/a11y.spec.ts:33:5 › UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline (2.1s)
+  ✓   3 [chromium] › tests/dashboard.spec.ts:24:7 › Candidate identity and framing › UI-001 the demo provenance banner is present (453ms)
+  ✓   4 [chromium] › tests/dashboard.spec.ts:33:7 › Candidate identity and framing › UI-002 all ten screens render a verdict sentence (845ms)
+  ✓   5 [chromium] › tests/dashboard.spec.ts:46:7 › Candidate identity and framing › UI-014 every left-rail link resolves to a screen that exists (671ms)
+  ✓   6 [chromium] › tests/dashboard.spec.ts:82:7 › Verdicts state the absence, not a zero › UI-003 Delivery today says none of the landings carries a verdict (524ms)
+  ✓   7 [chromium] › tests/dashboard.spec.ts:91:7 › Verdicts state the absence, not a zero › UI-006 Decisions reports 7 mandates with a receipt and 4 refuted (529ms)
+  ✓   8 [chromium] › tests/dashboard.spec.ts:108:7 › Readiness blockers are named, not scored › UI-005 Business intent shows exactly six blockers with one open conflict (590ms)
+  ✓   9 [chromium] › tests/dashboard.spec.ts:130:7 › Provenance is carried by every figure › UI-007 every dial carries exactly one provenance chip from the vocabulary (549ms)
+  ✓  10 [chromium] › tests/dashboard.spec.ts:149:7 › Provenance is carried by every figure › UI-008 every screen carries at least one chart (618ms)
+  ✓  11 [chromium] › tests/dashboard.spec.ts:159:7 › Interaction › UI-009 the trace picker switches the heading and the state line (2.2s)
+  ✓  12 [chromium] › tests/dashboard.spec.ts:182:7 › Interaction › UI-010 the theme toggle flips data-theme and returns (646ms)
+  ✓  13 [chromium] › tests/dashboard.spec.ts:194:7 › Rendering hygiene › UI-012 no rendered text leaks undefined or NaN (513ms)
+  ✓  14 [chromium] › tests/not-assessed.spec.ts:16:5 › UI-004 the Rework share dial reads the literal state, never a number (523ms)
+  ✓  15 [chromium] › tests/not-assessed.spec.ts:49:5 › UI-013 no not-assessed state badge renders a numeral (512ms)
+  -  16 [chromium] › tests/not-assessed.spec.ts:62:5 › UI-016 the board renders with no third-party network access
+
+  1 skipped
+  15 passed (15.4s)

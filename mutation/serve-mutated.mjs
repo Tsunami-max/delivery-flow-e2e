@@ -65,7 +65,7 @@ if (!mutation) {
 
 async function candidate() {
   if (existsSync(CACHE) && !args.refresh) return readFileSync(CACHE, 'utf8');
-  const res = await fetch(CANDIDATE_URL, { redirect: 'follow' });
+  const res = await fetch(CANDIDATE_URL + (CANDIDATE_URL.includes('?') ? '&' : '?') + 'candidate=' + Date.now(), { redirect: 'follow', cache: 'no-store', headers: { 'cache-control': 'no-cache', pragma: 'no-cache' } });
   if (!res.ok) throw new Error(`candidate fetch failed: HTTP ${res.status}`);
   const html = await res.text();
   mkdirSync(CACHE_DIR, { recursive: true });

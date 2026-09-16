@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+    body{margin:0;background:#F5F6F3;padding:28px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif}
+    .card{background:#1A1F1E;border-radius:12px;padding:0;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.12);width:1180px}
+    .bar{background:#242A29;color:#C8CDC9;padding:10px 16px;font-size:14px;display:flex;justify-content:space-between}
+    .bar b{color:#fff;font-weight:600} .bar span.a{color:#1B607A}
+    pre{margin:0;padding:18px 20px;color:#E8EBE7;font:13px/1.5 "SF Mono",Menlo,Consolas,monospace;white-space:pre-wrap}
+    .ok{color:#6CBF95} .bad{color:#E07A6C}
+    </style></head><body><div class="card"><div class="bar"><b>npm test — delivery-flow-e2e against the live demo</b><span class="a">15 passed · 1 cannot-assess · retries: 0</span></div><pre>Running 16 tests using 1 worker
+  <span class="ok">✓</span>   1 [chromium] › tests/a11y.spec.ts:11:5 › UI-011 every details.more fold is reachable and operable by keyboard (2.3s)
+  <span class="ok">✓</span>   2 [chromium] › tests/a11y.spec.ts:33:5 › UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline (2.1s)
+  <span class="ok">✓</span>   3 [chromium] › tests/dashboard.spec.ts:24:7 › Candidate identity and framing › UI-001 the demo provenance banner is present (453ms)
+  <span class="ok">✓</span>   4 [chromium] › tests/dashboard.spec.ts:33:7 › Candidate identity and framing › UI-002 all ten screens render a verdict sentence (845ms)
+  <span class="ok">✓</span>   5 [chromium] › tests/dashboard.spec.ts:46:7 › Candidate identity and framing › UI-014 every left-rail link resolves to a screen that exists (671ms)
+  <span class="ok">✓</span>   6 [chromium] › tests/dashboard.spec.ts:82:7 › Verdicts state the absence, not a zero › UI-003 Delivery today says none of the landings carries a verdict (524ms)
+  <span class="ok">✓</span>   7 [chromium] › tests/dashboard.spec.ts:91:7 › Verdicts state the absence, not a zero › UI-006 Decisions reports 7 mandates with a receipt and 4 refuted (529ms)
+  <span class="ok">✓</span>   8 [chromium] › tests/dashboard.spec.ts:108:7 › Readiness blockers are named, not scored › UI-005 Business intent shows exactly six blockers with one open conflict (590ms)
+  <span class="ok">✓</span>   9 [chromium] › tests/dashboard.spec.ts:130:7 › Provenance is carried by every figure › UI-007 every dial carries exactly one provenance chip from the vocabulary (549ms)
+  <span class="ok">✓</span>  10 [chromium] › tests/dashboard.spec.ts:149:7 › Provenance is carried by every figure › UI-008 every screen carries at least one chart (618ms)
+  <span class="ok">✓</span>  11 [chromium] › tests/dashboard.spec.ts:159:7 › Interaction › UI-009 the trace picker switches the heading and the state line (2.2s)
+  <span class="ok">✓</span>  12 [chromium] › tests/dashboard.spec.ts:182:7 › Interaction › UI-010 the theme toggle flips data-theme and returns (646ms)
+  <span class="ok">✓</span>  13 [chromium] › tests/dashboard.spec.ts:194:7 › Rendering hygiene › UI-012 no rendered text leaks undefined or NaN (513ms)
+  <span class="ok">✓</span>  14 [chromium] › tests/not-assessed.spec.ts:16:5 › UI-004 the Rework share dial reads the literal state, never a number (523ms)
+  <span class="ok">✓</span>  15 [chromium] › tests/not-assessed.spec.ts:49:5 › UI-013 no not-assessed state badge renders a numeral (512ms)
+  -  16 [chromium] › tests/not-assessed.spec.ts:62:5 › UI-016 the board renders with no third-party network access
+  1 skipped
+  15 passed (15.4s)</pre></div></body></html>

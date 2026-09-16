@@ -1,0 +1,74 @@
+mutation      : rework-zero
+describe      : the Rework share dial is re-rendered as an observed 0 % instead of the not-assessed state
+sha256 origin : da439f75d00e6f378ae99c475ad4bac3d041f0eee78b9051cc95450df7691196
+sha256 served : 0b6d653afda0049a26d90ead8a41ccc2494ed17718a002f5000c31c42259dfc3
+serving       : http://127.0.0.1:8787/
+
+Running 16 tests using 1 worker
+
+  ✓   1 [chromium] › tests/a11y.spec.ts:11:5 › UI-011 every details.more fold is reachable and operable by keyboard (998ms)
+  ✓   2 [chromium] › tests/a11y.spec.ts:33:5 › UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline (962ms)
+  ✓   3 [chromium] › tests/dashboard.spec.ts:24:7 › Candidate identity and framing › UI-001 the demo provenance banner is present (242ms)
+  ✓   4 [chromium] › tests/dashboard.spec.ts:33:7 › Candidate identity and framing › UI-002 all ten screens render a verdict sentence (378ms)
+  ✓   5 [chromium] › tests/dashboard.spec.ts:46:7 › Candidate identity and framing › UI-014 every left-rail link resolves to a screen that exists (348ms)
+  ✓   6 [chromium] › tests/dashboard.spec.ts:82:7 › Verdicts state the absence, not a zero › UI-003 Delivery today says none of the landings carries a verdict (293ms)
+  ✓   7 [chromium] › tests/dashboard.spec.ts:91:7 › Verdicts state the absence, not a zero › UI-006 Decisions reports 7 mandates with a receipt and 4 refuted (258ms)
+  ✓   8 [chromium] › tests/dashboard.spec.ts:108:7 › Readiness blockers are named, not scored › UI-005 Business intent shows exactly six blockers with one open conflict (276ms)
+  ✓   9 [chromium] › tests/dashboard.spec.ts:130:7 › Provenance is carried by every figure › UI-007 every dial carries exactly one provenance chip from the vocabulary (265ms)
+  ✓  10 [chromium] › tests/dashboard.spec.ts:149:7 › Provenance is carried by every figure › UI-008 every screen carries at least one chart (277ms)
+  ✓  11 [chromium] › tests/dashboard.spec.ts:159:7 › Interaction › UI-009 the trace picker switches the heading and the state line (1.8s)
+  ✓  12 [chromium] › tests/dashboard.spec.ts:182:7 › Interaction › UI-010 the theme toggle flips data-theme and returns (608ms)
+  ✓  13 [chromium] › tests/dashboard.spec.ts:194:7 › Rendering hygiene › UI-012 no rendered text leaks undefined or NaN (1.1s)
+  ✘  14 [chromium] › tests/not-assessed.spec.ts:16:5 › UI-004 the Rework share dial reads the literal state, never a number (10.3s)
+  ✓  15 [chromium] › tests/not-assessed.spec.ts:49:5 › UI-013 no not-assessed state badge renders a numeral (308ms)
+  -  16 [chromium] › tests/not-assessed.spec.ts:62:5 › UI-016 the board renders with no third-party network access
+
+
+  1) [chromium] › tests/not-assessed.spec.ts:16:5 › UI-004 the Rework share dial reads the literal state, never a number 
+
+    Error: a not-assessed input must render as its state, not as a figure
+
+    expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('group', { name: /^Rework share:/ }).locator('.v')
+    Expected: "not assessed"
+    Received: "0 %"
+    Timeout:  10000ms
+
+    Call log:
+      - a not-assessed input must render as its state, not as a figure getByRole('group', { name: /^Rework share:/ }).locator('.v') with timeout 10000ms
+      - waiting for getByRole('group', { name: /^Rework share:/ }).locator('.v')
+        24 × locator resolved to <div class="v ">…</div>
+           - unexpected value "0 %"
+
+
+      22 |
+      23 |   // 1. The value is the pinned state word.
+    > 24 |   await expect(value, 'a not-assessed input must render as its state, not as a figure').toHaveText(expectedText);
+         |                                                                                         ^
+      25 |
+      26 |   // 2. It is marked as a not-assessed value, not styled as a measurement.
+      27 |   if (field<boolean>('UI-004', 'value_has_na_class')) {
+        at /Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts:24:89
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/not-assessed.spec.ts:16:5 › UI-004 the Rework share dial reads the literal state, never a number 
+  1 skipped
+  14 passed (19.7s)
+
+adverse run: mutation="rework-zero" playwright exit=1
+adverse oracle satisfied: the suite detected the mutation.
