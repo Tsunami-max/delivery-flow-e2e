@@ -86,12 +86,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1032,
+                  "duration": 888,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-16T16:01:41.372Z",
+                  "startTime": "2026-09-17T18:18:49.581Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -130,7 +130,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-16T16:01:42.651Z",
+                  "startTime": "2026-09-17T18:18:50.552Z",
                   "annotations": [
                     {
                       "type": "axe",
@@ -179,12 +179,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 292,
+                      "duration": 341,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:43.716Z",
+                      "startTime": "2026-09-17T18:18:51.616Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -213,12 +213,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 409,
+                      "duration": 432,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:44.012Z",
+                      "startTime": "2026-09-17T18:18:51.961Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -247,12 +247,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 336,
+                      "duration": 382,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:44.426Z",
+                      "startTime": "2026-09-17T18:18:52.396Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -289,12 +289,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 239,
+                      "duration": 337,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:44.767Z",
+                      "startTime": "2026-09-17T18:18:52.782Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -323,12 +323,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 230,
+                      "duration": 348,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:45.010Z",
+                      "startTime": "2026-09-17T18:18:53.130Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -365,12 +365,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 278,
+                      "duration": 342,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:45.244Z",
+                      "startTime": "2026-09-17T18:18:53.482Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -407,12 +407,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1427,
+                      "duration": 346,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:45.526Z",
+                      "startTime": "2026-09-17T18:18:53.828Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -441,12 +441,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 833,
+                      "duration": 329,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:46.956Z",
+                      "startTime": "2026-09-17T18:18:54.178Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -483,12 +483,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1728,
+                      "duration": 1781,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:47.793Z",
+                      "startTime": "2026-09-17T18:18:54.510Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -517,12 +517,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 347,
+                      "duration": 382,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:49.524Z",
+                      "startTime": "2026-09-17T18:18:56.295Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -559,12 +559,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 265,
+                      "duration": 349,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-09-16T16:01:49.875Z",
+                      "startTime": "2026-09-17T18:18:56.681Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -582,13 +582,47 @@
       ]
     },
     {
-      "title": "not-assessed.spec.ts",
-      "file": "not-assessed.spec.ts",
+      "title": "dora.spec.ts",
+      "file": "dora.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "UI-004 the Rework share dial reads the literal state, never a number",
+          "title": "UI-017 Delivery today shows exactly five delivery dials, one per DORA metric",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 340,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-17T18:18:57.035Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-e76881fd56997b550c4d",
+          "file": "dora.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "UI-018 Change fail share and Time to fix read the literal state with a reason",
           "ok": false,
           "tags": [],
           "tests": [
@@ -603,57 +637,167 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 10234,
+                  "duration": 10317,
                   "error": {
-                    "message": "Error: a not-assessed input must render as its state, not as a figure\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('group', { name: /^Rework share:/ }).locator('.v')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nReceived: \u001b[31m\"0 %\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - a not-assessed input must render as its state, not as a figure getByRole('group', { name: /^Rework share:/ }).locator('.v') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: /^Rework share:/ }).locator('.v')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"v \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"0 %\"\u001b[22m\n",
-                    "stack": "Error: a not-assessed input must render as its state, not as a figure\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('group', { name: /^Rework share:/ }).locator('.v')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nReceived: \u001b[31m\"0 %\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - a not-assessed input must render as its state, not as a figure getByRole('group', { name: /^Rework share:/ }).locator('.v') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: /^Rework share:/ }).locator('.v')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"v \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"0 %\"\u001b[22m\n\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts:24:89",
+                    "message": "Error: Change fail share must render as its state, not as a figure\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nReceived: \u001b[31m\"0 %\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Change fail share must render as its state, not as a figure locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"v \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"0 %\"\u001b[22m\n",
+                    "stack": "Error: Change fail share must render as its state, not as a figure\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nReceived: \u001b[31m\"0 %\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Change fail share must render as its state, not as a figure locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"v \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"0 %\"\u001b[22m\n\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/dora.spec.ts:31:79",
                     "location": {
-                      "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
-                      "column": 89,
-                      "line": 24
+                      "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/dora.spec.ts",
+                      "column": 79,
+                      "line": 31
                     },
-                    "snippet": "  22 |\n  23 |   // 1. The value is the pinned state word.\n> 24 |   await expect(value, 'a not-assessed input must render as its state, not as a figure').toHaveText(expectedText);\n     |                                                                                         ^\n  25 |\n  26 |   // 2. It is marked as a not-assessed value, not styled as a measurement.\n  27 |   if (field<boolean>('UI-004', 'value_has_na_class')) {"
+                    "snippet": "  29 |     await expect(dial, `the \"${label}\" dial must exist`).toHaveCount(1);\n  30 |     const value = dial.locator('.v');\n> 31 |     await expect(value, `${label} must render as its state, not as a figure`).toHaveText(expectedText);\n     |                                                                               ^\n  32 |     if (field<boolean>('UI-018', 'value_has_na_class')) await expect(value).toHaveClass(/\\bna\\b/);\n  33 |     await expect(dial.locator('.chip')).toHaveText(field<string>('UI-018', 'provenance_chip'));\n  34 |"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
-                        "column": 89,
-                        "line": 24
+                        "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/dora.spec.ts",
+                        "column": 79,
+                        "line": 31
                       },
-                      "message": "Error: a not-assessed input must render as its state, not as a figure\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('group', { name: /^Rework share:/ }).locator('.v')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nReceived: \u001b[31m\"0 %\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - a not-assessed input must render as its state, not as a figure getByRole('group', { name: /^Rework share:/ }).locator('.v') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: /^Rework share:/ }).locator('.v')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"v \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"0 %\"\u001b[22m\n\n\n  22 |\n  23 |   // 1. The value is the pinned state word.\n> 24 |   await expect(value, 'a not-assessed input must render as its state, not as a figure').toHaveText(expectedText);\n     |                                                                                         ^\n  25 |\n  26 |   // 2. It is marked as a not-assessed value, not styled as a measurement.\n  27 |   if (field<boolean>('UI-004', 'value_has_na_class')) {\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts:24:89"
+                      "message": "Error: Change fail share must render as its state, not as a figure\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v')\nExpected: \u001b[32m\"not assessed\"\u001b[39m\nReceived: \u001b[31m\"0 %\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Change fail share must render as its state, not as a figure locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#today').getByRole('group', { name: /^Change fail share:/ }).locator('.v')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"v \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"0 %\"\u001b[22m\n\n\n  29 |     await expect(dial, `the \"${label}\" dial must exist`).toHaveCount(1);\n  30 |     const value = dial.locator('.v');\n> 31 |     await expect(value, `${label} must render as its state, not as a figure`).toHaveText(expectedText);\n     |                                                                               ^\n  32 |     if (field<boolean>('UI-018', 'value_has_na_class')) await expect(value).toHaveClass(/\\bna\\b/);\n  33 |     await expect(dial.locator('.chip')).toHaveText(field<string>('UI-018', 'provenance_chip'));\n  34 |\n    at /Users/soft4u/Development/delivery-flow-e2e/tests/dora.spec.ts:31:79"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-16T16:01:50.145Z",
+                  "startTime": "2026-09-17T18:18:57.379Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/test-failed-1.png"
+                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/dora-UI-018-Change-fail-sh-540f8-literal-state-with-a-reason-chromium/test-failed-1.png"
                     },
                     {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/error-context.md"
+                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/dora-UI-018-Change-fail-sh-540f8-literal-state-with-a-reason-chromium/error-context.md"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/not-assessed-UI-004-the-Re-125f3-iteral-state-never-a-number-chromium/trace.zip"
+                      "path": "/Users/soft4u/Development/delivery-flow-e2e/test-results/dora-UI-018-Change-fail-sh-540f8-literal-state-with-a-reason-chromium/trace.zip"
                     }
                   ],
                   "errorLocation": {
-                    "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/not-assessed.spec.ts",
-                    "column": 89,
-                    "line": 24
+                    "file": "/Users/soft4u/Development/delivery-flow-e2e/tests/dora.spec.ts",
+                    "column": 79,
+                    "line": 31
                   }
                 }
               ],
               "status": "unexpected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-c34b4dd19e21ebabee2f",
+          "file": "dora.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "UI-019 the DORA mapping sits behind a fold and names all five metrics as analogues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 365,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-17T18:19:07.938Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-b134c1148a9bef39c30f",
+          "file": "dora.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "UI-020 the Cost screen names cost per accepted change and leaves it not assessed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-17T18:19:08.396Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-ce597c83f401e8d5264a",
+          "file": "dora.spec.ts",
+          "line": 73,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "not-assessed.spec.ts",
+      "file": "not-assessed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-004 the Rework share dial reads the literal state, never a number",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 313,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-17T18:19:08.783Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "d51be7c15d3dcdb5fcf8-021a77396862adf2fbc7",
@@ -677,12 +821,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 260,
+                  "duration": 329,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-16T16:02:00.611Z",
+                  "startTime": "2026-09-17T18:19:09.100Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -729,12 +873,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 229,
+                  "duration": 362,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-16T16:02:00.971Z",
+                  "startTime": "2026-09-17T18:19:09.432Z",
                   "annotations": [
                     {
                       "type": "cannot-assess",
@@ -770,9 +914,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-16T16:01:41.141Z",
-    "duration": 20089.168999999998,
-    "expected": 14,
+    "startTime": "2026-09-17T18:18:49.363Z",
+    "duration": 20460.143,
+    "expected": 18,
     "skipped": 1,
     "unexpected": 1,
     "flaky": 0

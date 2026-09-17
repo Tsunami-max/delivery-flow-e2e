@@ -1,0 +1,17 @@
+# Red-first evidence for cases UI-017..UI-020 and amended counts UI-011, UI-013
+# Run 2026-09-17 against the UNCHANGED live candidate https://s4u-methodology.pages.dev/demo/delivery-flow.html (S4U 4.0.5)
+# Expectations were pinned before the candidate change was built. Console tail, reporter=line:
+
+1 skipped
+13 passed (1.4m)
+6 failed
+[chromium] › tests/a11y.spec.ts:11:5 › UI-011 every details.more fold is reachable and operable by keyboard 
+[chromium] › tests/dora.spec.ts:16:5 › UI-017 Delivery today shows exactly five delivery dials, one per DORA metric 
+[chromium] › tests/dora.spec.ts:25:5 › UI-018 Change fail share and Time to fix read the literal state with a reason 
+[chromium] › tests/dora.spec.ts:49:5 › UI-019 the DORA mapping sits behind a fold and names all five metrics as analogues 
+[chromium] › tests/dora.spec.ts:73:5 › UI-020 the Cost screen names cost per accepted change and leaves it not assessed 
+[chromium] › tests/not-assessed.spec.ts:49:5 › UI-013 no not-assessed state badge renders a numeral 
+
+# Same suite against the rebuilt local candidate (file URL), before publication:
+1 skipped
+19 passed (27.1s)

@@ -228,3 +228,26 @@ pre-fix copy of the page, and the new server silently failed to bind. The harnes
 run when the port is already in use, and the mutation server fetches the candidate uncached.
 A test that runs against the wrong candidate is worse than no test; the receipt binds the digest
 for exactly this reason.
+
+
+## Extension for the DORA mapping — 2026-09-17
+
+The candidate's owner found that the first public redesign had dropped the mapping to DORA's
+software delivery metrics. Four expected results (UI-017 to UI-020) and two amended counts
+(UI-011 folds 12 to 13, UI-013 not-assessed badges 198 to 201) were pinned **before** the
+candidate was changed.
+
+| Step | Candidate | Result |
+|---|---|---|
+| 1. Red first | unchanged live page (S4U 4.0.5) | 6 failed (UI-011, UI-013, UI-017, UI-018, UI-019, UI-020), 13 passed, 1 cannot-assess |
+| 2. Rebuilt candidate, local file, before publication | `delivery-flow.html`, 83,513 bytes | 19 passed, 1 cannot-assess |
+| 3. Published candidate (S4U 4.0.6) | sha256 `a2415e35…c258334`, 83,513 bytes | 19 passed, 1 cannot-assess |
+| 4. Mutation `rework-zero` | published candidate, one edit | exactly UI-004 failed; 18 passed, 1 cannot-assess; exit 1 |
+| 5. Mutation `fail-share-zero` (new) | published candidate, one edit | exactly UI-018 failed; 18 passed, 1 cannot-assess; exit 1 |
+
+Steps 1 and 2 are summarised in `dora-red-first-2026-09-17.txt`; the JSON reporter was
+overridden in those two runs, so only the console tally was kept. That is a gap in this
+evidence, recorded rather than hidden. The pinned counts in the amendment were computed by
+reasoning about the planned change and turned out correct on the first build.
+
+The corpus reviewer field still reads `pending`. Nothing here is independently validated.

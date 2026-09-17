@@ -174,7 +174,7 @@
       "title": "Every details.more fold has a summary reachable and operable by keyboard",
       "locator": "details.more > summary",
       "expected": {
-        "fold_count": 12,
+        "fold_count": 13,
         "every_summary_focusable": true,
         "enter_key_toggles_open": true
       }
@@ -199,7 +199,7 @@
       "title": "No not-assessed state badge renders a numeral",
       "locator": ".state.na",
       "expected": {
-        "badge_count": 198,
+        "badge_count": 201,
         "allowed_texts": [
           "not assessed",
           "refuted"
@@ -252,6 +252,89 @@
       },
       "cannot_assess_reason": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
       "cannot_assess_pinned": true
+    },
+    {
+      "id": "UI-017",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Delivery today shows exactly five delivery dials, one per DORA software delivery metric",
+      "locator": "#today .dial",
+      "expected": {
+        "dial_count_on_today": 5,
+        "dial_labels": [
+          "Change lead time",
+          "Landing frequency",
+          "Change fail share",
+          "Time to fix",
+          "Rework share"
+        ]
+      },
+      "rationale": "The board's delivery figures were designed as analogues of DORA's five software delivery metrics. The redesign dropped that mapping; this case pins its return. Labels are the board's own words, never DORA's, because the boundaries differ."
+    },
+    {
+      "id": "UI-018",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Change fail share and Time to fix read the literal state with a reason, never a number",
+      "locator": "#today .dial with label 'Change fail share' and 'Time to fix'",
+      "expected": {
+        "labels": [
+          "Change fail share",
+          "Time to fix"
+        ],
+        "value_text": "not assessed",
+        "value_has_na_class": true,
+        "provenance_chip": "not assessed",
+        "reason_min_length": 20,
+        "forbidden_value_texts": [
+          "0",
+          "0%",
+          "0 %",
+          "0.0",
+          "-",
+          "0 h"
+        ]
+      },
+      "rationale": "A stability figure that was never collected must not read as a perfect score. This is the case the fail-share-zero mutation inverts."
+    },
+    {
+      "id": "UI-019",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "The DORA mapping sits behind a fold on Delivery today and names all five DORA metrics as analogues",
+      "locator": "#today details.more > summary[aria-label='Show how these map to DORA']",
+      "expected": {
+        "fold_open_label": "Show how these map to DORA",
+        "row_count": 5,
+        "dora_metrics": [
+          "Lead time for changes",
+          "Deployment frequency",
+          "Change failure rate",
+          "Failed deployment recovery time",
+          "Deployment rework rate"
+        ],
+        "must_contain_word": "analogue",
+        "must_not_contain": [
+          "DORA-compliant",
+          "DORA compliant",
+          "elite",
+          "Elite"
+        ]
+      },
+      "rationale": "A reader who knows DORA must find the mapping and must also be told the boundaries differ. Claiming a DORA tier from pre-production landings would borrow authority the data does not have."
+    },
+    {
+      "id": "UI-020",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "The Cost screen names cost per accepted change and leaves it not assessed",
+      "locator": "#cost .dial with label 'Cost per landed item'",
+      "expected": {
+        "label": "Cost per landed item",
+        "value_text": "not assessed",
+        "meta_must_contain": "cost per accepted change"
+      },
+      "rationale": "DORA's 2026 guidance recommends cost per accepted change over token counts. The fixture has no cost to divide, so the figure stays a state word."
     }
   ],
   "amendments": [
@@ -274,6 +357,24 @@
       "case": "UI-015",
       "change": "baselined_serious_violations: [color-contrast, summary-name] -> []",
       "reason": "Both defects were fixed in the candidate (s4u-methodology PR #70, 4161ec2) and verified absent by an axe probe on the live page; a baseline that no longer describes the candidate would let a regression hide behind it."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-017",
+        "UI-018",
+        "UI-019",
+        "UI-020"
+      ],
+      "reason": "New cases authored before the candidate change was built: the owner found that the redesign had dropped the DORA mapping the original board carried. Run against the unchanged live candidate first, where they are expected to fail."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-011",
+        "UI-013"
+      ],
+      "reason": "Pinned counts raised for a planned candidate change, before it was built: one new fold on Delivery today (12 to 13) and three not-assessed state cells in its mapping table (198 to 201). No assertion was weakened."
     }
   ],
   "open_defects": [

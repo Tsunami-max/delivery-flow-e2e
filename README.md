@@ -47,7 +47,9 @@ npm run typecheck
 ```
 
 `node scripts/run-mutated.mjs --mutation=drop-chip --port=8788` runs the second
-mutation. `TARGET_URL` overrides the candidate for any run.
+mutation and `--mutation=fail-share-zero --port=8789` the third. `TARGET_URL` overrides the
+candidate for any run. Delete `mutation/.cache/candidate.html` after the candidate changes;
+the harness caches it on purpose so that one run compares like with like.
 
 ## Layout
 
@@ -57,11 +59,12 @@ mutation. `TARGET_URL` overrides the candidate for any run.
 | `tests/corpus.ts` | typed loader; fails if a spec references an unpinned field |
 | `tests/dashboard.spec.ts` | structure, provenance, verdicts, interaction, hygiene |
 | `tests/not-assessed.spec.ts` | the not-assessed-is-not-zero cases, and the cannot-assess case |
+| `tests/dora.spec.ts` | the five DORA-analogue dials, their not-assessed states, the mapping fold, cost per accepted change |
 | `tests/a11y.spec.ts` | keyboard operability of folds, axe smoke against a recorded baseline |
 | `mutation/serve-mutated.mjs` | fetches the candidate once, serves a named mutation locally |
 | `scripts/run-mutated.mjs` | adverse driver; exits non-zero if the suite stays green |
 | `scripts/receipt.mjs` | builds the receipt from the Playwright JSON report |
-| `evidence/` | `results.json`, `results-mutated.json`, `receipt.json`, `mutation-proof.md` |
+| `evidence/` | `results.json`, `results-mutated.json`, `receipt.json`, `mutation-proof.md`, `dora-red-first-2026-09-17.txt` |
 
 ## Known open defects in the candidate
 

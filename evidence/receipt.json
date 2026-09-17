@@ -1,13 +1,13 @@
 {
   "statement": "Structural validity is not semantic approval. This receipt records what the listed structural checks observed against one candidate at one moment. It does not certify that the figures on the board are correct, that the underlying delivery data is fit for a decision, or that this candidate is approved for release. Business meaning and release authority remain with named humans.",
   "receipt_version": "ui-receipt-1",
-  "generated_at": "2026-09-16T15:45:21.825Z",
+  "generated_at": "2026-09-17T18:19:10.361Z",
   "candidate": {
     "url": "https://s4u-methodology.pages.dev/demo/delivery-flow.html",
     "resolved_url": "https://s4u-methodology.pages.dev/demo/delivery-flow",
     "http_status": 200,
-    "sha256_html": "da439f75d00e6f378ae99c475ad4bac3d041f0eee78b9051cc95450df7691196",
-    "bytes": 81716,
+    "sha256_html": "a2415e35294411001264f5bb89551492857ee6a3992c227016d2df37cc258334",
+    "bytes": 83513,
     "note": "Published candidate fetched over the network at receipt time; the page may change between runs."
   },
   "profile_version": "ui-structural-profile-v1",
@@ -16,7 +16,7 @@
     "author": "soft4ubvba@gmail.com (human brief owner)",
     "reviewer": "pending",
     "reviewer_note": "The expected-result corpus has NOT been independently reviewed. Until a named reviewer signs it, these outcomes are self-checked, not independently validated.",
-    "case_count": 16
+    "case_count": 20
   },
   "environment": {
     "node": "v25.2.1",
@@ -26,18 +26,18 @@
     "browser_channel": "chromium (bundled)",
     "retries_configured": 0,
     "workers": 1,
-    "git_commit": "8f7dd54d1c58b1a56bd8c5ff2f6a3b0702023fe0"
+    "git_commit": "ecb9e9e7a8664f68d888daac3da8c19d312493e5"
   },
   "run": {
-    "started_at": "2026-09-16T15:45:07.813Z",
-    "duration_ms": 13216.567,
-    "reporter_expected": 15,
+    "started_at": "2026-09-17T18:18:14.159Z",
+    "duration_ms": 12895.647,
+    "reporter_expected": 19,
     "reporter_unexpected": 0,
     "reporter_skipped": 1,
     "reporter_flaky": 0
   },
   "tally": {
-    "passed": 15,
+    "passed": 19,
     "failed": 0,
     "cannot-assess": 1,
     "inapplicable": 0
@@ -50,7 +50,7 @@
       "title": "Demo provenance banner is present",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 473,
+      "duration_ms": 481,
       "bound_test": "UI-001 the demo provenance banner is present"
     },
     {
@@ -60,7 +60,7 @@
       "title": "All ten screens render with a verdict sentence",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 692,
+      "duration_ms": 527,
       "bound_test": "UI-002 all ten screens render a verdict sentence"
     },
     {
@@ -70,7 +70,7 @@
       "title": "Delivery today verdict says none of the landings carries a verdict",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 381,
+      "duration_ms": 462,
       "bound_test": "UI-003 Delivery today says none of the landings carries a verdict"
     },
     {
@@ -80,7 +80,7 @@
       "title": "Rework share dial reads the literal state, never a number",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 399,
+      "duration_ms": 439,
       "bound_test": "UI-004 the Rework share dial reads the literal state, never a number"
     },
     {
@@ -90,7 +90,7 @@
       "title": "Business intent shows exactly six named blockers, one of them an open conflict",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 373,
+      "duration_ms": 392,
       "bound_test": "UI-005 Business intent shows exactly six blockers with one open conflict"
     },
     {
@@ -100,7 +100,7 @@
       "title": "Decisions screen reports 7 mandates with a receipt and 4 refuted",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 382,
+      "duration_ms": 405,
       "bound_test": "UI-006 Decisions reports 7 mandates with a receipt and 4 refuted"
     },
     {
@@ -110,7 +110,7 @@
       "title": "Every dial carries exactly one provenance chip from the approved vocabulary",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 379,
+      "duration_ms": 457,
       "bound_test": "UI-007 every dial carries exactly one provenance chip from the vocabulary"
     },
     {
@@ -120,7 +120,7 @@
       "title": "Every screen carries at least one chart",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 416,
+      "duration_ms": 504,
       "bound_test": "UI-008 every screen carries at least one chart"
     },
     {
@@ -130,7 +130,7 @@
       "title": "Trace picker switches the heading and the state line",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 1959,
+      "duration_ms": 1842,
       "bound_test": "UI-009 the trace picker switches the heading and the state line"
     },
     {
@@ -140,7 +140,7 @@
       "title": "Theme toggle flips data-theme and returns",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 1114,
+      "duration_ms": 517,
       "bound_test": "UI-010 the theme toggle flips data-theme and returns"
     },
     {
@@ -150,7 +150,7 @@
       "title": "Every details.more fold has a summary reachable and operable by keyboard",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 1711,
+      "duration_ms": 1190,
       "bound_test": "UI-011 every details.more fold is reachable and operable by keyboard"
     },
     {
@@ -160,7 +160,7 @@
       "title": "No rendered text leaks undefined or NaN",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 506,
+      "duration_ms": 448,
       "bound_test": "UI-012 no rendered text leaks undefined or NaN"
     },
     {
@@ -170,7 +170,7 @@
       "title": "No not-assessed state badge renders a numeral",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 373,
+      "duration_ms": 429,
       "bound_test": "UI-013 no not-assessed state badge renders a numeral"
     },
     {
@@ -180,7 +180,7 @@
       "title": "Left rail links resolve to the ten screen ids",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 529,
+      "duration_ms": 421,
       "bound_test": "UI-014 every left-rail link resolves to a screen that exists"
     },
     {
@@ -190,7 +190,7 @@
       "title": "Accessibility smoke: no serious or critical axe violations beyond the recorded baseline",
       "outcome": "passed",
       "detail": null,
-      "duration_ms": 2066,
+      "duration_ms": 1092,
       "bound_test": "UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline"
     },
     {
@@ -200,8 +200,48 @@
       "title": "Offline resilience: the board renders with no third-party network access",
       "outcome": "cannot-assess",
       "detail": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
-      "duration_ms": 441,
+      "duration_ms": 416,
       "bound_test": "UI-016 the board renders with no third-party network access"
+    },
+    {
+      "id": "UI-017",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Delivery today shows exactly five delivery dials, one per DORA software delivery metric",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 958,
+      "bound_test": "UI-017 Delivery today shows exactly five delivery dials, one per DORA metric"
+    },
+    {
+      "id": "UI-018",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Change fail share and Time to fix read the literal state with a reason, never a number",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 458,
+      "bound_test": "UI-018 Change fail share and Time to fix read the literal state with a reason"
+    },
+    {
+      "id": "UI-019",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "The DORA mapping sits behind a fold on Delivery today and names all five DORA metrics as analogues",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 455,
+      "bound_test": "UI-019 the DORA mapping sits behind a fold and names all five metrics as analogues"
+    },
+    {
+      "id": "UI-020",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "The Cost screen names cost per accepted change and leaves it not assessed",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 435,
+      "bound_test": "UI-020 the Cost screen names cost per accepted change and leaves it not assessed"
     }
   ],
   "unbound_tests": [],
@@ -249,6 +289,24 @@
       "case": "UI-015",
       "change": "baselined_serious_violations: [color-contrast, summary-name] -> []",
       "reason": "Both defects were fixed in the candidate (s4u-methodology PR #70, 4161ec2) and verified absent by an axe probe on the live page; a baseline that no longer describes the candidate would let a regression hide behind it."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-017",
+        "UI-018",
+        "UI-019",
+        "UI-020"
+      ],
+      "reason": "New cases authored before the candidate change was built: the owner found that the redesign had dropped the DORA mapping the original board carried. Run against the unchanged live candidate first, where they are expected to fail."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-011",
+        "UI-013"
+      ],
+      "reason": "Pinned counts raised for a planned candidate change, before it was built: one new fold on Delivery today (12 to 13) and three not-assessed state cells in its mapping table (198 to 201). No assertion was weakened."
     }
   ],
   "not_claimed": [

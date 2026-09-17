@@ -46,6 +46,16 @@ const MUTATIONS = {
       return html.replace(this.from, this.to);
     },
   },
+  'fail-share-zero': {
+    describe:
+      'the Change fail share dial is re-rendered as an observed 0 % instead of the not-assessed state',
+    from: 'dial("Change fail share", NA, "", NA,',
+    to: 'dial("Change fail share", 0, " %", "observed",',
+    apply(html) {
+      if (!html.includes(this.from)) throw new Error(`mutation anchor not found: ${this.from}`);
+      return html.replace(this.from, this.to);
+    },
+  },
   'drop-chip': {
     describe: 'the provenance chip is removed from every dial',
     from: '<div class="k"><span>${esc(label)}</span>${chip(prov)}</div>',
