@@ -1,0 +1,1303 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.2.1/bin/node",
+      "/private/tmp/s4u-flow-e2e-igLnE2/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/private/tmp/s4u-flow-e2e-igLnE2/playwright.config.ts",
+    "rootDir": "/private/tmp/s4u-flow-e2e-igLnE2/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "candidate_url": "http://127.0.0.1:8874/delivery-flow.html",
+      "corpus": "expected-v2",
+      "browser_channel": "chrome",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/private/tmp/s4u-flow-e2e-igLnE2/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "candidate_url": "http://127.0.0.1:8874/delivery-flow.html",
+          "corpus": "expected-v2",
+          "browser_channel": "chrome",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/private/tmp/s4u-flow-e2e-igLnE2/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "evidence/results-v2.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "a11y.spec.ts",
+      "file": "a11y.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-011 every details.more fold is reachable and operable by keyboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1950,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:36.912Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3ad05f8c0e05077efb-5512f033c4bd8d1fc5cf",
+          "file": "a11y.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "axe",
+                  "description": "0 violations total; serious/critical: none; baselined open defects still present: none"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4012,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:39.403Z",
+                  "annotations": [
+                    {
+                      "type": "axe",
+                      "description": "0 violations total; serious/critical: none; baselined open defects still present: none"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3ad05f8c0e05077efb-d9aef721ece54b27af3b",
+          "file": "a11y.spec.ts",
+          "line": 33,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.ts",
+      "file": "dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Candidate identity and framing",
+          "file": "dashboard.spec.ts",
+          "line": 23,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-001 the demo provenance banner is present",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 731,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:43.439Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-fbfc623bd0a7cf220580",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "UI-002 all ten screens render a verdict sentence",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1204,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:44.184Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-20ac11adcb13bd25f8d5",
+              "file": "dashboard.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "UI-014 every left-rail link resolves to a screen that exists",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 885,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:45.406Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-b428a36a8a624b7c6197",
+              "file": "dashboard.spec.ts",
+              "line": 46,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Verdicts state the absence, not a zero",
+          "file": "dashboard.spec.ts",
+          "line": 81,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-003 Delivery today says none of the landings carries a verdict",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 697,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:46.306Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-f74378bb63671eeef2b6",
+              "file": "dashboard.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "UI-006 Decisions reports 7 mandates with a receipt and 4 refuted",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 664,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:47.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-2e5944c2a1f1e8356118",
+              "file": "dashboard.spec.ts",
+              "line": 91,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Readiness blockers are named, not scored",
+          "file": "dashboard.spec.ts",
+          "line": 107,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-005 Business intent shows exactly six blockers with one open conflict",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 938,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:47.693Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-bfb1aa0cc26319cb30b7",
+              "file": "dashboard.spec.ts",
+              "line": 108,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Provenance is carried by every figure",
+          "file": "dashboard.spec.ts",
+          "line": 129,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-007 every dial carries exactly one provenance chip from the vocabulary",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 850,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:48.643Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-5d74e85c7dc1ee0305d0",
+              "file": "dashboard.spec.ts",
+              "line": 130,
+              "column": 7
+            },
+            {
+              "title": "UI-008 every screen carries at least one chart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 841,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:49.508Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-151597d3e802767ba433",
+              "file": "dashboard.spec.ts",
+              "line": 149,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Interaction",
+          "file": "dashboard.spec.ts",
+          "line": 158,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-009 the trace picker switches the heading and the state line",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2332,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:50.361Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4e73bde76b9e55a0dc39",
+              "file": "dashboard.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "UI-010 the theme toggle flips data-theme and returns",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 673,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:52.708Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-ad273a300638fcc98822",
+              "file": "dashboard.spec.ts",
+              "line": 182,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Rendering hygiene",
+          "file": "dashboard.spec.ts",
+          "line": 193,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-012 no rendered text leaks undefined or NaN",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 510,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-22T05:27:53.391Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-45060f8ade8778063b32",
+              "file": "dashboard.spec.ts",
+              "line": 194,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dora.spec.ts",
+      "file": "dora.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-017 Delivery today shows exactly five delivery dials, one per DORA metric",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:53.917Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-e76881fd56997b550c4d",
+          "file": "dora.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "UI-018 Change fail share and Time to fix read the literal state with a reason",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 949,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:54.510Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-c34b4dd19e21ebabee2f",
+          "file": "dora.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "UI-019 the DORA mapping sits behind a fold and names all five metrics as analogues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 646,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:55.470Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-b134c1148a9bef39c30f",
+          "file": "dora.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "UI-020 the Cost screen names cost per accepted change and leaves it not assessed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 568,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:56.129Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "526d51e45caf3ce53425-ce597c83f401e8d5264a",
+          "file": "dora.spec.ts",
+          "line": 73,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "flow-v2.spec.ts",
+      "file": "flow-v2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-021 default first-pass fields keep absent initial evidence unassessed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1027,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:56.717Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI3OTU3OTZiODgyYzgwNTMzZmEyMzUxMWE0ZjE5MDA5NGEzZTdiYzVhMDM2ZjUwMTc2YzQxZjM4ZTUxYWE2NzU0IiwiYnl0ZXMiOjg0MzY2fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0ZjM5MzY1MjU0NDBkZGU2MTYwZTFjNDhiZTY3ODllNGQ3ZDkyODg1YmQzOTc1NDYzZTNmMmViMWVkYTcxMzQ0IiwiYnl0ZXMiOjgzMzk1fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-58b2b7b25daa983153b2",
+          "file": "flow-v2.spec.ts",
+          "line": 46,
+          "column": 7
+        },
+        {
+          "title": "UI-022 an initial failure remains failed after a corrected later attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 712,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:57.753Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIwNzllYWFiYmM0OWQwMGQ4NjRmMDY1MTg0MjMwNjNhZjMyOTUyYWQxMmY4OTNkYmI3NTUwOWRlM2ZhNTg3M2M0IiwiYnl0ZXMiOjg2Mzg3fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-ac5694c34f56e265c84b",
+          "file": "flow-v2.spec.ts",
+          "line": 60,
+          "column": 7
+        },
+        {
+          "title": "UI-023 missing criteria and invalid first-pass denominators stay unassessed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1544,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:27:58.478Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0NGRjZDkyYWEwODQzMGJlODVmMDU0MzM5MDlhM2VkNGJhMzE5MDBlZTUwOTQ4MjZjZjkwODg2MWEwMDJjOTFmIiwiYnl0ZXMiOjg2MDg3fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC9mbG93LXByb2ZpbGUuanMiLCJzdGF0dXMiOjIwMCwic2hhMjU2IjoiMzZmNTliMGY0ODExMjBmMTAwNTllMDFhMDI0NTk3MGE3YmQ2ZWQ3ZTExYTQ0ZWQ5NjQ3N2JlMjQ3NDRhZjVkMSIsImJ5dGVzIjoxMTMzN30seyJ1cmwiOiJodHRwOi8vMTI3LjAuMC4xOjg4NzQvd29yay1wb2xpY3kuanMiLCJzdGF0dXMiOjIwMCwic2hhMjU2IjoiNDI1NmU3NjIwMjRmNGZmY2M4ZTNiYmMwYWRjYzYwYTJjYmQ2ZmM4OTgzYWVlYTI4NzBjMGEzNDIyOGQ5MzczMiIsImJ5dGVzIjo3MjA0fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiJkYWU5NjRiNzA3YjZlMDhjMzZhY2FkMGQxOGI2ODFjYTExNjAxMWM4YjMyNzcwZmYyMjI5ZDlmODY3NWE5NzE1IiwiYnl0ZXMiOjg2MzczfSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiJlYjc0NGVkODQ1NDNhODhkNTc4NDdmYjIyMWI3MzE5NjRkZTRiNDI3YjA4YTkxZjEyYmIyZTBlZmU2NDU0ODAyIiwiYnl0ZXMiOjg2MzY4fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIyZjg2YmViYWMwNzcyMDk5YzkzMzZkZmFmNGI0NmFhNWM3ZWI0MzY5NzQ2YzE2MGVkYzM0NmNhNWZhNmVmZmNkIiwiYnl0ZXMiOjg2Mzg3fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiJmYmY4YzkxYzlmYjYyMmM3YjhkNjgxOGQ5ZWQ2YjgyNzJjYTgyNWYyMTVjYWY1MzcyMTA5ZTY0YTRlMDc5ZmMwIiwiYnl0ZXMiOjg2NDU3fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-aea9c830f1b0c4809c7e",
+          "file": "flow-v2.spec.ts",
+          "line": 65,
+          "column": 7
+        },
+        {
+          "title": "UI-024 missing authorship inputs retain four unassessed class rows and five analogues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 955,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:00.037Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI3OTU3OTZiODgyYzgwNTMzZmEyMzUxMWE0ZjE5MDA5NGEzZTdiYzVhMDM2ZjUwMTc2YzQxZjM4ZTUxYWE2NzU0IiwiYnl0ZXMiOjg0MzY2fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-79eef46f98e77cdae992",
+          "file": "flow-v2.spec.ts",
+          "line": 79,
+          "column": 7
+        },
+        {
+          "title": "UI-025 actual authorship grouping computes the five analogues with separate samples",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1577,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:01.004Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIwNzllYWFiYmM0OWQwMGQ4NjRmMDY1MTg0MjMwNjNhZjMyOTUyYWQxMmY4OTNkYmI3NTUwOWRlM2ZhNTg3M2M0IiwiYnl0ZXMiOjg2Mzg3fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-f83399c9ba1f7110db7e",
+          "file": "flow-v2.spec.ts",
+          "line": 87,
+          "column": 7
+        },
+        {
+          "title": "UI-026 conflicting class declarations remain visible as unknown",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 720,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:02.590Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiJjNTY0N2FmOTkwODJhODE5MzM5Njk5ZDcwYzJmNjVmMGQ5MjIzYWZiNzVjNmQ3MDU5ZjFmNzkzM2Q5YjBmNzYwIiwiYnl0ZXMiOjg2NDQwfSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-67885de63d26cd1be933",
+          "file": "flow-v2.spec.ts",
+          "line": 109,
+          "column": 7
+        },
+        {
+          "title": "UI-027 incomplete or mismatched populations cannot produce class rates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3245,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:03.323Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIyMmEzMWRhMjlmNzk5Y2M1YWU4MmE5MmZmYmE5NDg2MGI3ZDZkNmE1MTExYjMxYmMzYjFkM2VmNjI1NzNjMGEzIiwiYnl0ZXMiOjg2Mzg4fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI3MWRmNDExNDg5Yjg4NGRkZGUwM2VlZDA5N2IyOTg3YWJiYTY2MDJiZTFlMjlkNTI1ZmU2OGQ4NTIyZmJiNDAwIiwiYnl0ZXMiOjg2MzY4fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiJlZWQyYjEzYmVmNGY4ODI4YTQxZDAyMjUzYzNhMmFiMTdmNTE0OGE4NjVmZjY4Yzc4NDZkNmJmZTlhNzc2ZDkxIiwiYnl0ZXMiOjg2Mzc5fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiJmZDU2MGUyNWEwMGIzZjgxOWIxZjZlZTg5ODQ0YzUxYThhYzlkNzExYWY3MzcwZjE4YTZiNTk2ZjdlYjM2MDg1IiwiYnl0ZXMiOjg2Njg1fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    },
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI2YWUxN2Y4NjE2YjA0ZDlhNDNhMTU0MWI2MWQxOTJkZjY0OWUwYjE2OWE0MWE3NDczYzFlOWJjZTc5NjdiNzdjIiwiYnl0ZXMiOjg2Mzg3fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-41d9d307b3afe11063e6",
+          "file": "flow-v2.spec.ts",
+          "line": 116,
+          "column": 7
+        },
+        {
+          "title": "UI-028 supplied labels are escaped and provenance does not claim authentication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 598,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:06.576Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiJlNjkyMzc3YmZkZTUyYTczOWFlNDViYzRlMWRmMTEwZDQ3NWMxNTkyMTRmZTBhNmQ2NThhODFhZGY0MGYzY2I4IiwiYnl0ZXMiOjg2NDM2fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-cf8437d2b1751b6b73e3",
+          "file": "flow-v2.spec.ts",
+          "line": 130,
+          "column": 7
+        },
+        {
+          "title": "UI-029 WIP proposal remains non-authorizing and names selected batch coverage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 624,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:07.186Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2RlbGl2ZXJ5LWZsb3cuaHRtbCIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI3OTU3OTZiODgyYzgwNTMzZmEyMzUxMWE0ZjE5MDA5NGEzZTdiYzVhMDM2ZjUwMTc2YzQxZjM4ZTUxYWE2NzU0IiwiYnl0ZXMiOjg0MzY2fSx7InVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6ODg3NC93b3JrLXBvbGljeS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiI0MjU2ZTc2MjAyNGY0ZmZjYzhlM2JiYzBhZGNjNjBhMmNiZDZmYzg5ODNhZWVhMjg3MGMwYTM0MjI4ZDkzNzMyIiwiYnl0ZXMiOjcyMDR9LHsidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo4ODc0L2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIzNmY1OWIwZjQ4MTEyMGYxMDA1OWUwMWEwMjQ1OTcwYTdiZDZlZDdlMTFhNDRlZDk2NDc3YmUyNDc0NGFmNWQxIiwiYnl0ZXMiOjExMzM3fV19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-f4161545218c817de78a",
+          "file": "flow-v2.spec.ts",
+          "line": 137,
+          "column": 7
+        }
+      ]
+    },
+    {
+      "title": "not-assessed.spec.ts",
+      "file": "not-assessed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-004 the Rework share dial reads the literal state, never a number",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 628,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:07.826Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d51be7c15d3dcdb5fcf8-021a77396862adf2fbc7",
+          "file": "not-assessed.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "UI-013 no not-assessed state badge renders a numeral",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 569,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:08.464Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d51be7c15d3dcdb5fcf8-5bdc04a094c8b1f3ef29",
+          "file": "not-assessed.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "UI-016 the board renders with no third-party network access",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "cannot-assess",
+                  "description": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted."
+                },
+                {
+                  "type": "expectation",
+                  "description": "UI-016"
+                },
+                {
+                  "type": "skip",
+                  "description": "cannot-assess: The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
+                  "location": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/not-assessed.spec.ts",
+                    "line": 68,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 508,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:28:09.043Z",
+                  "annotations": [
+                    {
+                      "type": "cannot-assess",
+                      "description": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted."
+                    },
+                    {
+                      "type": "expectation",
+                      "description": "UI-016"
+                    },
+                    {
+                      "type": "skip",
+                      "description": "cannot-assess: The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/not-assessed.spec.ts",
+                        "line": 68,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d51be7c15d3dcdb5fcf8-a4e3cf9674cc327cb4c7",
+          "file": "not-assessed.spec.ts",
+          "line": 62,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-22T05:27:36.333Z",
+    "duration": 33493.778000000006,
+    "expected": 28,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

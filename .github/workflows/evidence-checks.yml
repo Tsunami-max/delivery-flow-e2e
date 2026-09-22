@@ -1,0 +1,26 @@
+name: Evidence tooling checks
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [labeled]
+permissions:
+  contents: read
+jobs:
+  tooling:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'ci:gates'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run test:receipts
+# This checks tooling, not the candidate UI. UI results and response-byte witnesses
+# come from an explicitly selected reviewed candidate and remain separate evidence.

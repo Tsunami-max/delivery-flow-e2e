@@ -1,0 +1,169 @@
+{
+  "statement": "Entirely synthetic acceptance input, authored before implementation; no real delivery or identity evidence.",
+  "profile": {
+    "schema_version": 2,
+    "revision": "synthetic-flow-profile-2",
+    "minimum_sample": 1,
+    "landing_definition": "created-to-mainline-merge",
+    "window_rule": "utc-half-open",
+    "authorship_rule": "declared-sources-v1",
+    "stages": [
+      {
+        "id": "implement",
+        "label": "Implement",
+        "criterion_revision": "complete-accurate-1"
+      },
+      {
+        "id": "ci",
+        "label": "CI",
+        "criterion_revision": "complete-accurate-1"
+      },
+      {
+        "id": "review-wait",
+        "label": "Review wait",
+        "criterion_revision": "complete-accurate-1"
+      },
+      {
+        "id": "fix",
+        "label": "Fix",
+        "criterion_revision": "complete-accurate-1"
+      },
+      {
+        "id": "queue-to-merge",
+        "label": "Queue \u2192 merge",
+        "criterion_revision": "complete-accurate-1"
+      }
+    ]
+  },
+  "window": {
+    "id": "synthetic-day",
+    "from": "2026-09-21T00:00:00Z",
+    "to": "2026-09-22T00:00:00Z"
+  },
+  "first_pass": {
+    "profile_revision": "synthetic-flow-profile-2",
+    "window_id": "synthetic-day",
+    "stage_id": "ci",
+    "criterion_revision": "complete-accurate-1",
+    "eligible_items": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "records": [
+      {
+        "item_id": "a",
+        "attempt": 1,
+        "status": "failed",
+        "provenance": "observed"
+      },
+      {
+        "item_id": "a",
+        "attempt": 2,
+        "status": "passed",
+        "provenance": "observed"
+      },
+      {
+        "item_id": "b",
+        "attempt": 1,
+        "status": "passed",
+        "provenance": "self-reported"
+      },
+      {
+        "item_id": "c",
+        "attempt": 1,
+        "status": "pending",
+        "provenance": "observed"
+      }
+    ]
+  },
+  "delivery": {
+    "profile_revision": "synthetic-flow-profile-2",
+    "window_id": "synthetic-day",
+    "complete": true,
+    "provenance": "observed",
+    "records": [
+      {
+        "id": "human-a",
+        "created_at": "2026-09-20T22:00:00Z",
+        "landed_at": "2026-09-21T00:00:00Z",
+        "authorship": [
+          {
+            "authorship_class": "human",
+            "source": "commit-trailer"
+          }
+        ],
+        "change_failed": true,
+        "failure_followup_complete": true,
+        "reworked": false,
+        "review_history_complete": true,
+        "fix_status": "measured",
+        "fix_hours": 1
+      },
+      {
+        "id": "human-b",
+        "created_at": "2026-09-21T02:00:00Z",
+        "landed_at": "2026-09-21T06:00:00Z",
+        "authorship": [
+          {
+            "authorship_class": "human",
+            "source": "commit-trailer"
+          }
+        ],
+        "change_failed": false,
+        "failure_followup_complete": true,
+        "reworked": null,
+        "review_history_complete": false,
+        "fix_status": "measured",
+        "fix_hours": 3
+      },
+      {
+        "id": "agent-a",
+        "created_at": "2026-09-21T02:00:00Z",
+        "landed_at": "2026-09-21T03:00:00Z",
+        "authorship": [
+          {
+            "authorship_class": "agent",
+            "source": "platform-bot"
+          }
+        ],
+        "change_failed": false,
+        "failure_followup_complete": true,
+        "reworked": true,
+        "review_history_complete": true,
+        "fix_status": "inapplicable",
+        "fix_hours": null
+      },
+      {
+        "id": "assisted-a",
+        "created_at": "2026-09-21T02:00:00Z",
+        "landed_at": "2026-09-21T08:00:00Z",
+        "authorship": [
+          {
+            "authorship_class": "AI-assisted",
+            "source": "commit-trailer"
+          }
+        ],
+        "change_failed": null,
+        "failure_followup_complete": false,
+        "reworked": false,
+        "review_history_complete": true,
+        "fix_status": "unknown",
+        "fix_hours": null
+      },
+      {
+        "id": "unknown-a",
+        "created_at": "2026-09-21T04:00:00Z",
+        "landed_at": "2026-09-21T06:00:00Z",
+        "authorship": [],
+        "change_failed": null,
+        "failure_followup_complete": false,
+        "reworked": null,
+        "review_history_complete": false,
+        "fix_status": "unknown",
+        "fix_hours": null
+      }
+    ]
+  }
+}

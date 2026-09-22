@@ -1,0 +1,173 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.2.1/bin/node",
+      "/private/tmp/s4u-flow-e2e-igLnE2/node_modules/@playwright/test/cli.js",
+      "test",
+      "tests/flow-v2.spec.ts",
+      "--grep",
+      "UI-022"
+    ],
+    "configFile": "/private/tmp/s4u-flow-e2e-igLnE2/playwright.config.ts",
+    "rootDir": "/private/tmp/s4u-flow-e2e-igLnE2/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "candidate_url": "http://127.0.0.1:55813/delivery-flow.html",
+      "corpus": "expected-v2",
+      "browser_channel": "chrome",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/private/tmp/s4u-flow-e2e-igLnE2/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "candidate_url": "http://127.0.0.1:55813/delivery-flow.html",
+          "corpus": "expected-v2",
+          "browser_channel": "chrome",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/private/tmp/s4u-flow-e2e-igLnE2/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "evidence/results-v2-mutated.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "flow-v2.spec.ts",
+      "file": "flow-v2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-022 an initial failure remains failed after a corrected later attempt",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11335,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nTimeout: 10000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 5\u001b[39m\n\n\u001b[32m- 50%\u001b[39m\n\u001b[31m+ CI · initial assessment\u001b[39m\n\u001b[31m+       100%\u001b[39m\n\u001b[31m+       2 / 2 assessed; eligible 4, failed 0, unknown 1, unfinished 1\u001b[39m\n\u001b[31m+       Initial assessed subset only. Sources declared: observed 2, self-reported 1; not authenticated.\u001b[39m\n\u001b[31m+       Profile synthetic-flow-profile-2; criterion complete-accurate-1; minimum sample 1. Window 2026-09-21T00:00:00Z to 2026-09-22T00:00:00Z (end excluded).\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"first-pass\" data-stage-id=\"ci\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"CI · initial assessment\u001b[22m\n\u001b[2m      100%\u001b[22m\n\u001b[2m      2 / 2 assessed; eligible 4, failed 0, unknown 1, unfinished 1\u001b[22m\n\u001b[2m      Initial assessed subset only. Sources declared: observed 2, self-reported 1; not authenticated.\u001b[22m\n\u001b[2m      Profile synthetic-flow-profile-2; criterion complete-accurate-1; minimum sample 1. Window 2026-09-21T00:00:00Z to 2026-09-22T00:00:00Z (end excluded).\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nTimeout: 10000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 5\u001b[39m\n\n\u001b[32m- 50%\u001b[39m\n\u001b[31m+ CI · initial assessment\u001b[39m\n\u001b[31m+       100%\u001b[39m\n\u001b[31m+       2 / 2 assessed; eligible 4, failed 0, unknown 1, unfinished 1\u001b[39m\n\u001b[31m+       Initial assessed subset only. Sources declared: observed 2, self-reported 1; not authenticated.\u001b[39m\n\u001b[31m+       Profile synthetic-flow-profile-2; criterion complete-accurate-1; minimum sample 1. Window 2026-09-21T00:00:00Z to 2026-09-22T00:00:00Z (end excluded).\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"first-pass\" data-stage-id=\"ci\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"CI · initial assessment\u001b[22m\n\u001b[2m      100%\u001b[22m\n\u001b[2m      2 / 2 assessed; eligible 4, failed 0, unknown 1, unfinished 1\u001b[22m\n\u001b[2m      Initial assessed subset only. Sources declared: observed 2, self-reported 1; not authenticated.\u001b[22m\n\u001b[2m      Profile synthetic-flow-profile-2; criterion complete-accurate-1; minimum sample 1. Window 2026-09-21T00:00:00Z to 2026-09-22T00:00:00Z (end excluded).\"\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:58:83",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 83,
+                      "line": 58
+                    },
+                    "snippet": "  56 |     await load(page,positive);\n  57 |     const cell=page.locator(`#time .first-pass[data-stage-id=\"${field<string>('UI-022','stage_id')}\"]`);\n> 58 |     for(const text of field<string[]>('UI-022','must_contain'))await expect(cell).toContainText(text);\n     |                                                                                   ^\n  59 |   });\n  60 |   test('UI-023 missing criteria and invalid first-pass denominators stay unassessed',async({page})=>{\n  61 |     for(const variant of field<string[]>('UI-023','invalid_variants')) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 83,
+                        "line": 58
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nTimeout: 10000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 5\u001b[39m\n\n\u001b[32m- 50%\u001b[39m\n\u001b[31m+ CI · initial assessment\u001b[39m\n\u001b[31m+       100%\u001b[39m\n\u001b[31m+       2 / 2 assessed; eligible 4, failed 0, unknown 1, unfinished 1\u001b[39m\n\u001b[31m+       Initial assessed subset only. Sources declared: observed 2, self-reported 1; not authenticated.\u001b[39m\n\u001b[31m+       Profile synthetic-flow-profile-2; criterion complete-accurate-1; minimum sample 1. Window 2026-09-21T00:00:00Z to 2026-09-22T00:00:00Z (end excluded).\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to <div class=\"first-pass\" data-stage-id=\"ci\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"CI · initial assessment\u001b[22m\n\u001b[2m      100%\u001b[22m\n\u001b[2m      2 / 2 assessed; eligible 4, failed 0, unknown 1, unfinished 1\u001b[22m\n\u001b[2m      Initial assessed subset only. Sources declared: observed 2, self-reported 1; not authenticated.\u001b[22m\n\u001b[2m      Profile synthetic-flow-profile-2; criterion complete-accurate-1; minimum sample 1. Window 2026-09-21T00:00:00Z to 2026-09-22T00:00:00Z (end excluded).\"\u001b[22m\n\n\n  56 |     await load(page,positive);\n  57 |     const cell=page.locator(`#time .first-pass[data-stage-id=\"${field<string>('UI-022','stage_id')}\"]`);\n> 58 |     for(const text of field<string[]>('UI-022','must_contain'))await expect(cell).toContainText(text);\n     |                                                                                   ^\n  59 |   });\n  60 |   test('UI-023 missing criteria and invalid first-pass denominators stay unassessed',async({page})=>{\n  61 |     for(const variant of field<string[]>('UI-023','invalid_variants')) {\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:58:83"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:22:46.070Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-assets",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTUzLjAuODAxMC41MyIsImFzc2V0cyI6W3sidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo1NTgxMy9kZWxpdmVyeS1mbG93Lmh0bWwiLCJzdGF0dXMiOjIwMCwic2hhMjU2IjoiOWFlZDkxZWIyOTllNWExNDQ0NGNiZmUwZDM0MjQ5Yzk5N2Q4NzM2YzNmMzNjZDkyOTkyYjQxYzhkMjhhNTgxYyIsImJ5dGVzIjo4NjAxNH0seyJ1cmwiOiJodHRwOi8vMTI3LjAuMC4xOjU1ODEzL3dvcmstcG9saWN5LmpzIiwic3RhdHVzIjoyMDAsInNoYTI1NiI6IjQyNTZlNzYyMDI0ZjRmZmNjOGUzYmJjMGFkY2M2MGEyY2JkNmZjODk4M2FlZWEyODcwYzBhMzQyMjhkOTM3MzIiLCJieXRlcyI6NzIwNH0seyJ1cmwiOiJodHRwOi8vMTI3LjAuMC4xOjU1ODEzL2Zsb3ctcHJvZmlsZS5qcyIsInN0YXR1cyI6MjAwLCJzaGEyNTYiOiIxZWVlMDAyYjk1NTkzNWU2ZjU5NDI2N2Y5ZjUyZWUyNTg0MTFjZWVkODUwMWY3ZWYyZGM0N2Q5MWMzOTAxYzMzIiwiYnl0ZXMiOjExMzIwfV19"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-022-an-initial--76bb7-r-a-corrected-later-attempt-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-022-an-initial--76bb7-r-a-corrected-later-attempt-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-022-an-initial--76bb7-r-a-corrected-later-attempt-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 83,
+                    "line": 58
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-ac5694c34f56e265c84b",
+          "file": "flow-v2.spec.ts",
+          "line": 55,
+          "column": 7
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-22T05:22:45.293Z",
+    "duration": 13478.989,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

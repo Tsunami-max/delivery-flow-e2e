@@ -6,16 +6,18 @@
  * execution environment, and one outcome per pinned expectation. It records
  * what was observed. It does not approve anything.
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
-import { chromium } from '@playwright/test';
+
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const RESULTS = resolve(ROOT, 'evidence', 'results.json');
-const CORPUS = resolve(ROOT, 'expectations', 'expected-v1.json');
+const selected = process.env.EXPECTED_CORPUS ?? 'expected-v1';
+if (!['expected-v1','expected-v2'].includes(selected)) throw new Error('Unsupported expected corpus');
+const RESULTS = resolve(ROOT, process.env.PLAYWRIGHT_JSON_OUTPUT_NAME ?? 'evidence/results.json');
+const CORPUS = resolve(ROOT, 'expectations', selected + '.json');
 const OUT = resolve(ROOT, 'evidence', process.env.RECEIPT_OUT ?? 'receipt.json');
 
 const STATEMENT =
@@ -32,8 +34,10 @@ if (!existsSync(RESULTS)) {
 
 const corpus = JSON.parse(readFileSync(CORPUS, 'utf8'));
 const results = JSON.parse(readFileSync(RESULTS, 'utf8'));
-const candidateUrl =
-  process.env.TARGET_URL ?? 'https://s4u-methodology.pages.dev/demo/delivery-flow.html';
+const candidateUrl = process.env.TARGET_URL ?? 'https://s4u-methodology.pages.dev/demo/delivery-flow.html';
+const metadata=results.config?.metadata;
+if (selected==='expected-v2' && (metadata?.corpus!==selected || metadata?.candidate_url!==candidateUrl))
+  throw new Error('Run metadata does not bind the selected corpus and candidate');
 
 /** Flatten the Playwright JSON report into { id -> observation }. */
 function flatten(suites, acc = []) {
@@ -48,6 +52,8 @@ function flatten(suites, acc = []) {
           resultStatus: last.status,
           durationMs: last.duration ?? 0,
           annotations: t.annotations ?? [],
+          asset_witnesses: (last.attachments ?? []).filter(a=>a.name==='candidate-assets'&&a.body)
+            .map(a=>JSON.parse(Buffer.from(a.body,'base64').toString('utf8'))),
           errors: (last.errors ?? []).map((e) => (e.message ?? '').split('\n').slice(0, 6).join('\n')),
         });
       }
@@ -60,13 +66,14 @@ function flatten(suites, acc = []) {
 const observations = flatten(results.suites);
 
 function outcomeFor(caseId) {
-  const obs = observations.filter((o) => o.title.startsWith(caseId));
+  const obs = observations.filter((o) => o.title===caseId || o.title.startsWith(caseId+' '));
   if (obs.length === 0) {
     return {
-      outcome: 'inapplicable',
+      outcome: 'cannot-assess',
       detail: 'no test in this run is bound to this expectation id',
     };
   }
+  if(obs.length!==1)return {outcome:'cannot-assess',detail:'multiple observations bind this id; resolve ambiguity explicitly'};
   const o = obs[0];
   const cannotAssess = o.annotations.find((a) => a.type === 'cannot-assess');
   if (cannotAssess) {
@@ -91,12 +98,12 @@ function outcomeFor(caseId) {
 }
 
 const res = await fetch(candidateUrl, { redirect: 'follow' });
+if(!res.ok)throw new Error('Candidate post-run fetch failed: '+res.status);
 const html = await res.text();
 const sha256 = createHash('sha256').update(html).digest('hex');
 
-const browser = await chromium.launch();
-const browserVersion = browser.version();
-await browser.close();
+const witnesses = observations.flatMap(o=>o.asset_witnesses);
+const browserVersions = [...new Set(witnesses.map(w=>w.browser).filter(Boolean))];
 
 const pwVersion = JSON.parse(
   readFileSync(resolve(ROOT, 'node_modules', '@playwright', 'test', 'package.json'), 'utf8'),
@@ -111,6 +118,10 @@ try {
   gitCommit = null;
 }
 
+const sourcePaths=['playwright.config.ts','package.json','package-lock.json',
+  ...['tests','scripts','expectations'].flatMap(dir=>readdirSync(resolve(ROOT,dir),{withFileTypes:true})
+    .filter(entry=>entry.isFile()).map(entry=>dir+'/'+entry.name))];
+const suiteSources=Object.fromEntries(sourcePaths.sort().map(path=>[path,createHash('sha256').update(readFileSync(resolve(ROOT,path))).digest('hex')]));
 const cases = corpus.cases.map((c) => {
   const r = outcomeFor(c.id);
   return {
@@ -132,7 +143,7 @@ const unbound = observations
 
 const receipt = {
   statement: STATEMENT,
-  receipt_version: 'ui-receipt-1',
+  receipt_version: 'ui-receipt-2',
   generated_at: new Date().toISOString(),
   candidate: {
     url: candidateUrl,
@@ -140,14 +151,14 @@ const receipt = {
     http_status: res.status,
     sha256_html: sha256,
     bytes: Buffer.byteLength(html),
-    note:
-      candidateUrl.includes('127.0.0.1') || candidateUrl.includes('localhost')
-        ? 'This run was executed against a locally served, deliberately mutated copy of the candidate (adverse oracle run). It is not a validation of the published page.'
-        : 'Published candidate fetched over the network at receipt time; the page may change between runs.',
+    kind: process.env.CANDIDATE_KIND ?? 'candidate',
+    note: 'This HTML digest is a post-run fetch, not proof of bytes executed. Per-test response witnesses below bind observed HTML/helper bytes; injected synthetic model variants have their own HTML digests. Localhost does not imply mutation.',
+    response_witnesses: observations.filter(o=>o.asset_witnesses.length).map(o=>({test:o.title,witnesses:o.asset_witnesses})),
   },
   profile_version: corpus.profile_version,
   corpus: {
     version: corpus.corpus_version,
+    sha256: createHash('sha256').update(readFileSync(CORPUS)).digest('hex'),
     author: corpus.author,
     reviewer: corpus.reviewer,
     reviewer_note:
@@ -160,11 +171,13 @@ const receipt = {
     node: process.version,
     platform: `${process.platform} ${process.arch}`,
     playwright_test: pwVersion,
-    browser: browserVersion,
-    browser_channel: 'chromium (bundled)',
+    browser: browserVersions.length ? browserVersions : null,
+    browser_channel: metadata?.browser_channel ?? 'not recorded',
     retries_configured: 0,
     workers: 1,
     git_commit: gitCommit,
+    suite_source_sha256: suiteSources,
+    source_identity_note: 'Commit may precede working-tree edits; the explicit file digests identify the suite sources read at receipt time.',
   },
   run: {
     started_at: results.stats?.startTime ?? null,
@@ -188,6 +201,7 @@ const receipt = {
     'semantic correctness of any figure on the board',
     'fitness of the underlying delivery data for any decision',
     'coverage of surfaces other than the UI',
+    'candidate response-byte witnesses for older tests without attachments',
     'release readiness or approval of the candidate',
   ],
 };
