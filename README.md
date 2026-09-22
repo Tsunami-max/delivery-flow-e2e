@@ -20,8 +20,8 @@ signs the corpus, these outcomes are self-checked, not independently validated.
 **What the receipt does.** `evidence/receipt.json` binds candidate identity (URL
 plus sha256 of the fetched HTML), profile and corpus versions, the execution
 environment, and one outcome per pinned case — `passed`, `failed`,
-`cannot-assess` or `inapplicable`. It also carries the two open accessibility
-defects found in the candidate, so a green run never reads as a clean page.
+`cannot-assess` or `inapplicable`. It also carries the accessibility defect history and each recorded status. The two initial
+serious defects were subsequently fixed; historical receipts retain their original observations.
 
 **What the receipt does not claim.** Structural validity is not semantic
 approval. It does not certify that any figure on the board is correct, that the
@@ -75,3 +75,44 @@ the harness caches it on purpose so that one run compares like with like.
 
 UI-015 gates on *new* serious violations. The two above are carried in every
 receipt so that they cannot be lost behind a green run.
+
+
+## Prospective flow-profile v2
+
+The v1 corpus remains byte-identical. Select v2 explicitly; it adds first-assessment,
+declared-authorship and WIP cases authored before the flow adapter was implemented.
+The author is Codex under the owner's mandate; independent corpus review is still pending.
+
+Serve the reviewed methodology `website/static/demo` directory locally, then run:
+
+```sh
+EXPECTED_CORPUS=expected-v2 TARGET_URL=http://127.0.0.1:8874/delivery-flow.html \
+  PLAYWRIGHT_CHANNEL=chrome PLAYWRIGHT_JSON_OUTPUT_NAME=evidence/results-v2.json npm test
+EXPECTED_CORPUS=expected-v2 TARGET_URL=http://127.0.0.1:8874/delivery-flow.html \
+  PLAYWRIGHT_JSON_OUTPUT_NAME=evidence/results-v2.json RECEIPT_OUT=receipt-v2.json npm run receipt
+npm run typecheck
+npm run test:receipts
+CANDIDATE_DIR=/absolute/path/to/reviewed/website/static/demo PLAYWRIGHT_CHANNEL=chrome npm run test:flow-mutated
+```
+
+Omit `PLAYWRIGHT_CHANNEL` to use the installed bundled Chromium. Chrome uses a disposable
+profile, not a user's browser session. The mutation command serves only three explicit assets
+from scratch buffers, removes the first-attempt selection in the helper, and requires UI-022
+to fail on its 50% expectation. It never edits the candidate checkout. Re-run the unmodified
+candidate afterward. The original mutation harness and its historical receipts remain separate.
+
+The v2 local run reports 28 passes and one cannot-assess case: UI-016's existing network
+independence expectation remains unassessed. Expanded-fold keyboard and axe checks include the
+new content; this does not certify general accessibility. Missing tests and ambiguous duplicate
+observations stay cannot-assess. Localhost alone is not evidence of a mutation.
+
+New cases attach response-byte digests for the HTML and helpers they actually received,
+including explicitly injected synthetic-model variants. Receipts retain those witnesses and
+hash suite source files. Their separate post-run HTML fetch is not proof of executed bytes;
+older cases have no response attachment. Receipts record local candidate verification, not
+hosted deployment, data fitness, identity authentication or release approval. Historical v1
+receipts and expected values are preserved.
+
+The `ci:gates` PR label explicitly requests hosted typecheck and receipt-regression checks on
+that PR head. It does not fetch a private methodology checkout or claim UI coverage. Candidate
+browser runs and mutation evidence remain separate. Reapply the label after a head change.

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { field } from './corpus';
+import { corpus, field } from './corpus';
 import { TARGET } from './target';
 
 test.beforeEach(async ({ page }) => {
@@ -33,6 +33,11 @@ test('UI-011 every details.more fold is reachable and operable by keyboard', asy
 test('UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline', async ({
   page,
 }, testInfo) => {
+  if (corpus.corpus_version === 'expected-v2') {
+    for (const summary of await page.locator('details.more > summary, details.how > summary').all()) {
+      await summary.focus();await page.keyboard.press('Enter');
+    }
+  }
   const results = await new AxeBuilder({ page })
     .withTags(field<string[]>('UI-015', 'tags'))
     .analyze();

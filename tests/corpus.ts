@@ -28,8 +28,11 @@ export interface Corpus {
   cases: ExpectedCase[];
 }
 
+const selected = process.env.EXPECTED_CORPUS ?? 'expected-v1';
+if (!['expected-v1', 'expected-v2'].includes(selected)) throw new Error('Unsupported expected corpus');
+
 export const corpus: Corpus = JSON.parse(
-  readFileSync(resolve(__dirname, '..', 'expectations', 'expected-v1.json'), 'utf8'),
+  readFileSync(resolve(__dirname, '..', 'expectations', selected + '.json'), 'utf8'),
 ) as Corpus;
 
 /** Look a case up by its pinned id. Fails loudly if the corpus and the specs drift apart. */
