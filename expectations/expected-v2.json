@@ -1,0 +1,584 @@
+{
+  "corpus_version": "expected-v2",
+  "profile_version": "ui-flow-profile-v2",
+  "author": "Codex under owner autonomous backlog mandate; author-created expectations",
+  "reviewer": "pending",
+  "authored_at": "2026-09-22",
+  "authored_before_specs": true,
+  "candidate_surface": "UI",
+  "candidate_url": "https://s4u-methodology.pages.dev/demo/delivery-flow.html",
+  "statement": "Versioned extension pinned before implementation from the committed flow-profile-v2 design. Author review is not independent review. Existing v1 expectations remain unchanged; explicit synthetic inputs exercise actual calculation and UI rendering.",
+  "screens": [
+    "intent",
+    "today",
+    "time",
+    "decisions",
+    "cost",
+    "fleet",
+    "trace",
+    "usage",
+    "history",
+    "enterprise"
+  ],
+  "provenance_vocabulary": [
+    "observed",
+    "self-reported",
+    "measured",
+    "estimated",
+    "not assessed",
+    "derived"
+  ],
+  "cases": [
+    {
+      "id": "UI-001",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Demo provenance banner is present",
+      "locator": ".demo",
+      "expected": {
+        "banner_lead_text": "Demo data.",
+        "must_contain": "Synthetic fixture"
+      }
+    },
+    {
+      "id": "UI-002",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "All ten screens render with a verdict sentence",
+      "expected": {
+        "screen_count": 10,
+        "each_has": "h1.verdict",
+        "verdict_min_length": 20
+      }
+    },
+    {
+      "id": "UI-003",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Delivery today verdict says none of the landings carries a verdict",
+      "locator": "#today h1.verdict",
+      "expected": {
+        "text": "40 items landed in the last 24 hours, and none of them carries a check-run verdict.",
+        "must_contain_word": "none",
+        "must_not_contain": [
+          "0 of them",
+          "zero"
+        ]
+      }
+    },
+    {
+      "id": "UI-004",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Rework share dial reads the literal state, never a number",
+      "locator": "#today .dial with label 'Rework share'",
+      "expected": {
+        "value_text": "not assessed",
+        "value_has_na_class": true,
+        "provenance_chip": "not assessed",
+        "forbidden_value_texts": [
+          "0",
+          "0%",
+          "0 %",
+          "0.0",
+          "-"
+        ]
+      },
+      "rationale": "Missing telemetry must not become zero defects. This is the case the mutation harness inverts."
+    },
+    {
+      "id": "UI-005",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Business intent shows exactly six named blockers, one of them an open conflict",
+      "locator": "#intent .blockers .blk",
+      "expected": {
+        "blocker_count": 6,
+        "labels": [
+          "missing owner",
+          "open conflict",
+          "absent approval",
+          "missing evidence",
+          "stale publication",
+          "missing review"
+        ],
+        "open_conflict_count": 1,
+        "open_blk_elements": 1
+      }
+    },
+    {
+      "id": "UI-006",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Decisions screen reports 7 mandates with a receipt and 4 refuted",
+      "locator": "#decisions h1.verdict",
+      "expected": {
+        "mandates_with_receipt": 7,
+        "refuted": 4,
+        "refuted_badges_in_section": 4,
+        "badge_text": "refuted"
+      },
+      "rationale": "Refuted receipts must be as visible as verified ones."
+    },
+    {
+      "id": "UI-007",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Every dial carries exactly one provenance chip from the approved vocabulary",
+      "locator": ".dial",
+      "expected": {
+        "dial_count": 20,
+        "chips_per_dial": 1,
+        "chip_text_in_vocabulary": true
+      }
+    },
+    {
+      "id": "UI-008",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Every screen carries at least one chart",
+      "locator": "section .viz",
+      "expected": {
+        "min_charts_per_screen": 1
+      }
+    },
+    {
+      "id": "UI-009",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Trace picker switches the heading and the state line",
+      "locator": "#trace-pick button[data-i]",
+      "expected": {
+        "initial_heading": "WI-013 \u2014 Record the review queue a dispatch hold writes",
+        "after_selecting_index_5_heading": "WI-071 \u2014 Reissue an eligibility rule version that is no longer published",
+        "after_selecting_index_5_state": "merged Tue 21:50 \u00b7 1,619 lines",
+        "aria_pressed_moves": true
+      }
+    },
+    {
+      "id": "UI-010",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Theme toggle flips data-theme and returns",
+      "locator": "#theme",
+      "expected": {
+        "initial": "light",
+        "after_one_click": "dark",
+        "after_two_clicks": "light"
+      }
+    },
+    {
+      "id": "UI-011",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Every details.more fold has a summary reachable and operable by keyboard",
+      "locator": "details.more > summary",
+      "expected": {
+        "fold_count": 13,
+        "every_summary_focusable": true,
+        "enter_key_toggles_open": true
+      }
+    },
+    {
+      "id": "UI-012",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "No rendered text leaks undefined or NaN",
+      "expected": {
+        "forbidden_substrings": [
+          "undefined",
+          "NaN"
+        ],
+        "scope": "all visible text including opened folds"
+      }
+    },
+    {
+      "id": "UI-013",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "No not-assessed state badge renders a numeral",
+      "locator": ".state.na",
+      "expected": {
+        "badge_count": 201,
+        "allowed_texts": [
+          "not assessed",
+          "refuted"
+        ],
+        "forbidden_pattern": "any badge whose text is a bare number"
+      },
+      "note": "194 badges read 'not assessed' and 4 read 'refuted' on the pinned candidate; both are words, never zero."
+    },
+    {
+      "id": "UI-014",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Left rail links resolve to the ten screen ids",
+      "locator": "nav.rail a[href^='#']",
+      "expected": {
+        "every_href_targets_existing_element": true,
+        "covers_all_ten_screens": true,
+        "links_visible_without_interaction": 5,
+        "links_behind_rail_fold": 5,
+        "rail_fold_summary": "Details"
+      },
+      "note": "Amended 2026-09-16 after first observation: the rail lists all ten screens, but five (fleet, trace, usage, history, enterprise) sit behind a collapsed 'Details' fold and are therefore absent from the accessibility tree until it is opened. The expectation now states the candidate's actual navigation design; the test opens the fold by keyboard before asserting coverage."
+    },
+    {
+      "id": "UI-015",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "Accessibility smoke: no serious or critical axe violations beyond the recorded baseline",
+      "expected": {
+        "engine": "@axe-core/playwright",
+        "tags": [
+          "wcag2a",
+          "wcag2aa",
+          "wcag21a",
+          "wcag21aa"
+        ],
+        "max_new_serious_or_critical_violations": 0,
+        "baselined_serious_violations": [],
+        "note": " Baseline emptied 2026-09-16 after A11Y-001/002 were fixed in the candidate; the gate now fails on any serious or critical rule."
+      },
+      "note": "Amended 2026-09-16 after first observation. The candidate carries two serious axe violations on the landing view: color-contrast (34 nodes) and summary-name (22 nodes, the fold summaries carry their label in CSS content and so have no accessible name). These are OPEN DEFECTS IN THE CANDIDATE, not acceptable behaviour. They are baselined so the gate detects new regressions; they are reported in the receipt as open defects and are not waived."
+    },
+    {
+      "id": "UI-016",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Offline resilience: the board renders with no third-party network access",
+      "expected": {
+        "outcome": "cannot-assess"
+      },
+      "cannot_assess_reason": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
+      "cannot_assess_pinned": true
+    },
+    {
+      "id": "UI-017",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Delivery today shows exactly five delivery dials, one per DORA software delivery metric",
+      "locator": "#today .dial",
+      "expected": {
+        "dial_count_on_today": 5,
+        "dial_labels": [
+          "Change lead time",
+          "Landing frequency",
+          "Change fail share",
+          "Time to fix",
+          "Rework share"
+        ]
+      },
+      "rationale": "The board's delivery figures were designed as analogues of DORA's five software delivery metrics. The redesign dropped that mapping; this case pins its return. Labels are the board's own words, never DORA's, because the boundaries differ."
+    },
+    {
+      "id": "UI-018",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Change fail share and Time to fix read the literal state with a reason, never a number",
+      "locator": "#today .dial with label 'Change fail share' and 'Time to fix'",
+      "expected": {
+        "labels": [
+          "Change fail share",
+          "Time to fix"
+        ],
+        "value_text": "not assessed",
+        "value_has_na_class": true,
+        "provenance_chip": "not assessed",
+        "reason_min_length": 20,
+        "forbidden_value_texts": [
+          "0",
+          "0%",
+          "0 %",
+          "0.0",
+          "-",
+          "0 h"
+        ]
+      },
+      "rationale": "A stability figure that was never collected must not read as a perfect score. This is the case the fail-share-zero mutation inverts."
+    },
+    {
+      "id": "UI-019",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "The DORA mapping sits behind a fold on Delivery today and names all five DORA metrics as analogues",
+      "locator": "#today details.more > summary[aria-label='Show how these map to DORA']",
+      "expected": {
+        "fold_open_label": "Show how these map to DORA",
+        "row_count": 5,
+        "dora_metrics": [
+          "Lead time for changes",
+          "Deployment frequency",
+          "Change failure rate",
+          "Failed deployment recovery time",
+          "Deployment rework rate"
+        ],
+        "must_contain_word": "analogue",
+        "must_not_contain": [
+          "DORA-compliant",
+          "DORA compliant",
+          "elite",
+          "Elite"
+        ]
+      },
+      "rationale": "A reader who knows DORA must find the mapping and must also be told the boundaries differ. Claiming a DORA tier from pre-production landings would borrow authority the data does not have."
+    },
+    {
+      "id": "UI-020",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "The Cost screen names cost per accepted change and leaves it not assessed",
+      "locator": "#cost .dial with label 'Cost per landed item'",
+      "expected": {
+        "label": "Cost per landed item",
+        "value_text": "not assessed",
+        "meta_must_contain": "cost per accepted change"
+      },
+      "rationale": "DORA's 2026 guidance recommends cost per accepted change over token counts. The fixture has no cost to divide, so the figure stays a state word."
+    },
+    {
+      "id": "UI-021",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Default first-pass fields retain missing initial-assessment evidence",
+      "expected": {
+        "stage_count": 5,
+        "value_text": "not assessed",
+        "must_contain": "initial assessment",
+        "profile_version": "flow profile v2"
+      }
+    },
+    {
+      "id": "UI-022",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "An initial failure followed by success is not first-pass success",
+      "expected": {
+        "stage_id": "ci",
+        "percent": 50,
+        "passed": 1,
+        "failed": 1,
+        "assessed": 2,
+        "eligible": 4,
+        "unknown": 1,
+        "unfinished": 1,
+        "must_contain": [
+          "50%",
+          "1 / 2",
+          "eligible 4",
+          "unknown 1",
+          "unfinished 1"
+        ]
+      }
+    },
+    {
+      "id": "UI-023",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Missing criterion and empty or insufficient first-pass denominators stay unassessed",
+      "expected": {
+        "value_text": "not assessed",
+        "forbidden_value": "0%",
+        "invalid_variants": [
+          "empty-inventory",
+          "wrong-criterion",
+          "wrong-profile",
+          "below-minimum",
+          "duplicate-attempt"
+        ]
+      }
+    },
+    {
+      "id": "UI-024",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Default authorship split keeps all four classes and five analogues unassessed",
+      "expected": {
+        "classes": [
+          "human",
+          "AI-assisted",
+          "agent",
+          "unknown"
+        ],
+        "metrics": [
+          "Change lead time",
+          "Landing frequency",
+          "Change fail share",
+          "Time to fix",
+          "Rework share"
+        ],
+        "missing_cells": 20,
+        "value_text": "not assessed"
+      }
+    },
+    {
+      "id": "UI-025",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Actual grouping derives all five analogues and states class provenance",
+      "expected": {
+        "population": 5,
+        "human": {
+          "assigned": 2,
+          "provenance": "self-reported",
+          "lead_hours": 3,
+          "landings_per_day": 2,
+          "change_fail_percent": 50,
+          "fix_hours": 2,
+          "rework_percent": 0,
+          "rework_sample": 1,
+          "rework_unknown": 1
+        },
+        "agent": {
+          "assigned": 1,
+          "provenance": "observed",
+          "lead_hours": 1,
+          "landings_per_day": 1,
+          "change_fail_percent": 0,
+          "fix_hours": null,
+          "rework_percent": 100
+        },
+        "unknown_count": 1
+      }
+    },
+    {
+      "id": "UI-026",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "Conflicting declarations become unknown and never disappear from the population",
+      "expected": {
+        "conflict_item": "human-a",
+        "unknown_count": 2,
+        "human_count": 1,
+        "population": 5,
+        "must_contain": "unknown"
+      }
+    },
+    {
+      "id": "UI-027",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Incomplete or mismatched delivery populations never produce rates or zero-frequency claims",
+      "expected": {
+        "variants": [
+          "incomplete",
+          "wrong-profile",
+          "wrong-window",
+          "duplicate-item",
+          "outside-window"
+        ],
+        "missing_cells": 20,
+        "value_text": "not assessed"
+      }
+    },
+    {
+      "id": "UI-028",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "Authorship and first-pass markup escapes supplied labels and retains scope limits",
+      "expected": {
+        "injected_label": "<img src=x onerror=\"window.__flow_xss=true\">",
+        "image_count": 0,
+        "must_contain": [
+          "declared",
+          "not authenticated"
+        ]
+      }
+    },
+    {
+      "id": "UI-029",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Selected WIP policy retains non-authorizing proposal and batch population coverage",
+      "expected": {
+        "count": 13,
+        "limit": 3,
+        "must_contain": [
+          "Draft only",
+          "24 of 74",
+          "50 omitted",
+          "cannot authorize or execute"
+        ]
+      }
+    }
+  ],
+  "amendments": [
+    {
+      "date": "2026-09-16",
+      "cases": [
+        "UI-014"
+      ],
+      "reason": "Expectation was over-stated: it assumed all ten rail links are exposed without interaction. Corrected to the candidate's fold-based rail design after direct observation. No assertion was weakened; the test now performs the interaction a user would."
+    },
+    {
+      "date": "2026-09-16",
+      "cases": [
+        "UI-015"
+      ],
+      "reason": "Expectation of zero serious/critical axe violations was not met by the candidate. Rather than deleting the check or marking it passed, the two observed violations are recorded as named open defects and baselined, so the gate now detects NEW serious violations. The open defects are carried into every receipt."
+    },
+    {
+      "date": "2026-09-16",
+      "case": "UI-015",
+      "change": "baselined_serious_violations: [color-contrast, summary-name] -> []",
+      "reason": "Both defects were fixed in the candidate (s4u-methodology PR #70, 4161ec2) and verified absent by an axe probe on the live page; a baseline that no longer describes the candidate would let a regression hide behind it."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-017",
+        "UI-018",
+        "UI-019",
+        "UI-020"
+      ],
+      "reason": "New cases authored before the candidate change was built: the owner found that the redesign had dropped the DORA mapping the original board carried. Run against the unchanged live candidate first, where they are expected to fail."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-011",
+        "UI-013"
+      ],
+      "reason": "Pinned counts raised for a planned candidate change, before it was built: one new fold on Delivery today (12 to 13) and three not-assessed state cells in its mapping table (198 to 201). No assertion was weakened."
+    },
+    {
+      "date": "2026-09-22",
+      "cases": [
+        "UI-021",
+        "UI-022",
+        "UI-023",
+        "UI-024",
+        "UI-025",
+        "UI-026",
+        "UI-027",
+        "UI-028",
+        "UI-029"
+      ],
+      "reason": "Prospective flow-profile-v2 extension pinned before adapter implementation. UI-029 checks the already implemented WIP prerequisite. Author-created and not independently reviewed. UI-013 remains 201 because its selector is .state.na, not all .state badges."
+    }
+  ],
+  "open_defects": [
+    {
+      "id": "A11Y-001",
+      "surface": "UI",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "nodes_observed": 34,
+      "status": "fixed",
+      "note": "Observed on the candidate landing view; not fixed, not waived.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
+    },
+    {
+      "id": "A11Y-002",
+      "surface": "UI",
+      "rule": "summary-name",
+      "impact": "serious",
+      "nodes_observed": 22,
+      "status": "fixed",
+      "note": "details summaries render their label through CSS content, leaving no accessible name for assistive technology.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
+    }
+  ]
+}
