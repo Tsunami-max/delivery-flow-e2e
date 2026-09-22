@@ -1,0 +1,712 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.2.1/bin/node",
+      "/private/tmp/s4u-flow-e2e-igLnE2/node_modules/.bin/playwright",
+      "test",
+      "tests/flow-v2.spec.ts"
+    ],
+    "configFile": "/private/tmp/s4u-flow-e2e-igLnE2/playwright.config.ts",
+    "rootDir": "/private/tmp/s4u-flow-e2e-igLnE2/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/private/tmp/s4u-flow-e2e-igLnE2/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/private/tmp/s4u-flow-e2e-igLnE2/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "evidence/results-v2-red.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "flow-v2.spec.ts",
+      "file": "flow-v2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-021 default first-pass fields keep absent initial evidence unassessed",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10699,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#time .first-pass')\nExpected: \u001b[32m5\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('#time .first-pass') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#time .first-pass')\nExpected: \u001b[32m5\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('#time .first-pass') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:38:53",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 53,
+                      "line": 38
+                    },
+                    "snippet": "  36 |   test('UI-021 default first-pass fields keep absent initial evidence unassessed',async({page})=>{\n  37 |     await load(page);\n> 38 |     await expect(page.locator('#time .first-pass')).toHaveCount(field<number>('UI-021','stage_count'));\n     |                                                     ^\n  39 |     for(const cell of await page.locator('#time .first-pass').all()) {\n  40 |       await expect(cell).toContainText(field<string>('UI-021','value_text'));\n  41 |       await expect(cell).toContainText(field<string>('UI-021','must_contain'));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 53,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#time .first-pass')\nExpected: \u001b[32m5\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('#time .first-pass') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  36 |   test('UI-021 default first-pass fields keep absent initial evidence unassessed',async({page})=>{\n  37 |     await load(page);\n> 38 |     await expect(page.locator('#time .first-pass')).toHaveCount(field<number>('UI-021','stage_count'));\n     |                                                     ^\n  39 |     for(const cell of await page.locator('#time .first-pass').all()) {\n  40 |       await expect(cell).toContainText(field<string>('UI-021','value_text'));\n  41 |       await expect(cell).toContainText(field<string>('UI-021','must_contain'));\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:38:53"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:15:50.704Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-021-default-fir-db528-initial-evidence-unassessed-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-021-default-fir-db528-initial-evidence-unassessed-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-021-default-fir-db528-initial-evidence-unassessed-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 53,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-58b2b7b25daa983153b2",
+          "file": "flow-v2.spec.ts",
+          "line": 36,
+          "column": 7
+        },
+        {
+          "title": "UI-022 an initial failure remains failed after a corrected later attempt",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10809,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"50%\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"50%\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:48:83",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 83,
+                      "line": 48
+                    },
+                    "snippet": "  46 |     await load(page,positive);\n  47 |     const cell=page.locator(`#time .first-pass[data-stage-id=\"${field<string>('UI-022','stage_id')}\"]`);\n> 48 |     for(const text of field<string[]>('UI-022','must_contain'))await expect(cell).toContainText(text);\n     |                                                                                   ^\n  49 |   });\n  50 |   test('UI-023 missing criteria and invalid first-pass denominators stay unassessed',async({page})=>{\n  51 |     for(const variant of field<string[]>('UI-023','invalid_variants')) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 83,
+                        "line": 48
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"50%\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\n\n  46 |     await load(page,positive);\n  47 |     const cell=page.locator(`#time .first-pass[data-stage-id=\"${field<string>('UI-022','stage_id')}\"]`);\n> 48 |     for(const text of field<string[]>('UI-022','must_contain'))await expect(cell).toContainText(text);\n     |                                                                                   ^\n  49 |   });\n  50 |   test('UI-023 missing criteria and invalid first-pass denominators stay unassessed',async({page})=>{\n  51 |     for(const variant of field<string[]>('UI-023','invalid_variants')) {\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:48:83"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:16:02.278Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-022-an-initial--76bb7-r-a-corrected-later-attempt-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-022-an-initial--76bb7-r-a-corrected-later-attempt-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-022-an-initial--76bb7-r-a-corrected-later-attempt-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 83,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-ac5694c34f56e265c84b",
+          "file": "flow-v2.spec.ts",
+          "line": 45,
+          "column": 7
+        },
+        {
+          "title": "UI-023 missing criteria and invalid first-pass denominators stay unassessed",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11195,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"not assessed\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"not assessed\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:60:26",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 26,
+                      "line": 60
+                    },
+                    "snippet": "  58 |       });\n  59 |       const cell=page.locator('#time .first-pass[data-stage-id=\"ci\"]');\n> 60 |       await expect(cell).toContainText(field<string>('UI-023','value_text'));\n     |                          ^\n  61 |       await expect(cell).not.toContainText(field<string>('UI-023','forbidden_value'));\n  62 |     }\n  63 |   });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 26,
+                        "line": 60
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"not assessed\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\n\n  58 |       });\n  59 |       const cell=page.locator('#time .first-pass[data-stage-id=\"ci\"]');\n> 60 |       await expect(cell).toContainText(field<string>('UI-023','value_text'));\n     |                          ^\n  61 |       await expect(cell).not.toContainText(field<string>('UI-023','forbidden_value'));\n  62 |     }\n  63 |   });\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:60:26"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:16:14.201Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-023-missing-cri-93ef0-enominators-stay-unassessed-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-023-missing-cri-93ef0-enominators-stay-unassessed-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-023-missing-cri-93ef0-enominators-stay-unassessed-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 26,
+                    "line": 60
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-aea9c830f1b0c4809c7e",
+          "file": "flow-v2.spec.ts",
+          "line": 50,
+          "column": 7
+        },
+        {
+          "title": "UI-024 missing authorship inputs retain four unassessed class rows and five analogues",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11178,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:67:124",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 124,
+                      "line": 67
+                    },
+                    "snippet": "  65 |     await load(page);await openToday(page);\n  66 |     const table=page.locator('.authorship-breakdown');\n> 67 |     for(const name of field<string[]>('UI-024','classes'))await expect(table.locator(`[data-authorship-class=\"${name}\"]`)).toHaveCount(1);\n     |                                                                                                                            ^\n  68 |     for(const name of field<string[]>('UI-024','metrics'))await expect(table).toContainText(name);\n  69 |     await expect(table.locator('td[data-metric]')).toHaveCount(field<number>('UI-024','missing_cells'));\n  70 |     for(const cell of await table.locator('td[data-metric]').all())await expect(cell).toContainText(field<string>('UI-024','value_text'));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 124,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown').locator('[data-authorship-class=\"human\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  65 |     await load(page);await openToday(page);\n  66 |     const table=page.locator('.authorship-breakdown');\n> 67 |     for(const name of field<string[]>('UI-024','classes'))await expect(table.locator(`[data-authorship-class=\"${name}\"]`)).toHaveCount(1);\n     |                                                                                                                            ^\n  68 |     for(const name of field<string[]>('UI-024','metrics'))await expect(table).toContainText(name);\n  69 |     await expect(table.locator('td[data-metric]')).toHaveCount(field<number>('UI-024','missing_cells'));\n  70 |     for(const cell of await table.locator('td[data-metric]').all())await expect(cell).toContainText(field<string>('UI-024','value_text'));\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:67:124"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:16:26.527Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-024-missing-aut-e2b12-ass-rows-and-five-analogues-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-024-missing-aut-e2b12-ass-rows-and-five-analogues-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-024-missing-aut-e2b12-ass-rows-and-five-analogues-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 124,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-79eef46f98e77cdae992",
+          "file": "flow-v2.spec.ts",
+          "line": 64,
+          "column": 7
+        },
+        {
+          "title": "UI-025 actual authorship grouping computes the five analogues with separate samples",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11228,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authorship-breakdown')\nExpected substring: \u001b[32m\"Population 5\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authorship-breakdown') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authorship-breakdown')\nExpected substring: \u001b[32m\"Population 5\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authorship-breakdown') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown')\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:75:25",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 25,
+                      "line": 75
+                    },
+                    "snippet": "  73 |     await load(page,positive);await openToday(page);\n  74 |     const table=page.locator('.authorship-breakdown');\n> 75 |     await expect(table).toContainText(`Population ${field<number>('UI-025','population')}`);\n     |                         ^\n  76 |     for(const name of ['human','agent']) {\n  77 |       const expected=field<Record<string,any>>('UI-025',name);\n  78 |       const row=table.locator(`[data-authorship-class=\"${name}\"]`);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 25,
+                        "line": 75
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authorship-breakdown')\nExpected substring: \u001b[32m\"Population 5\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authorship-breakdown') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown')\u001b[22m\n\n\n  73 |     await load(page,positive);await openToday(page);\n  74 |     const table=page.locator('.authorship-breakdown');\n> 75 |     await expect(table).toContainText(`Population ${field<number>('UI-025','population')}`);\n     |                         ^\n  76 |     for(const name of ['human','agent']) {\n  77 |       const expected=field<Record<string,any>>('UI-025',name);\n  78 |       const row=table.locator(`[data-authorship-class=\"${name}\"]`);\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:75:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:16:38.737Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-025-actual-auth-867a1-ogues-with-separate-samples-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-025-actual-auth-867a1-ogues-with-separate-samples-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-025-actual-auth-867a1-ogues-with-separate-samples-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 25,
+                    "line": 75
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-f83399c9ba1f7110db7e",
+          "file": "flow-v2.spec.ts",
+          "line": 72,
+          "column": 7
+        },
+        {
+          "title": "UI-026 conflicting class declarations remain visible as unknown",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11588,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authorship-breakdown')\nExpected substring: \u001b[32m\"Population 5\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authorship-breakdown') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authorship-breakdown')\nExpected substring: \u001b[32m\"Population 5\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authorship-breakdown') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown')\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:95:25",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 25,
+                      "line": 95
+                    },
+                    "snippet": "  93 |     await load(page,m=>{positive(m);m.flow_evidence.delivery.records.find((r:any)=>r.id===field<string>('UI-026','conflict_item')).authorship.push({authorship_class:'agent',source:'platform-bot'});});\n  94 |     await openToday(page);const table=page.locator('.authorship-breakdown');\n> 95 |     await expect(table).toContainText(`Population ${field<number>('UI-026','population')}`);\n     |                         ^\n  96 |     await expect(table.locator('[data-authorship-class=\"unknown\"] [data-assigned]')).toHaveText(String(field<number>('UI-026','unknown_count')));\n  97 |     await expect(table.locator('[data-authorship-class=\"human\"] [data-assigned]')).toHaveText(String(field<number>('UI-026','human_count')));\n  98 |   });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 25,
+                        "line": 95
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authorship-breakdown')\nExpected substring: \u001b[32m\"Population 5\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authorship-breakdown') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown')\u001b[22m\n\n\n  93 |     await load(page,m=>{positive(m);m.flow_evidence.delivery.records.find((r:any)=>r.id===field<string>('UI-026','conflict_item')).authorship.push({authorship_class:'agent',source:'platform-bot'});});\n  94 |     await openToday(page);const table=page.locator('.authorship-breakdown');\n> 95 |     await expect(table).toContainText(`Population ${field<number>('UI-026','population')}`);\n     |                         ^\n  96 |     await expect(table.locator('[data-authorship-class=\"unknown\"] [data-assigned]')).toHaveText(String(field<number>('UI-026','unknown_count')));\n  97 |     await expect(table.locator('[data-authorship-class=\"human\"] [data-assigned]')).toHaveText(String(field<number>('UI-026','human_count')));\n  98 |   });\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:95:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:16:51.471Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-026-conflicting-bdba0-s-remain-visible-as-unknown-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-026-conflicting-bdba0-s-remain-visible-as-unknown-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-026-conflicting-bdba0-s-remain-visible-as-unknown-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 25,
+                    "line": 95
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-67885de63d26cd1be933",
+          "file": "flow-v2.spec.ts",
+          "line": 92,
+          "column": 7
+        },
+        {
+          "title": "UI-027 incomplete or mismatched populations cannot produce class rates",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11686,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.authorship-breakdown td[data-metric]')\nExpected: \u001b[32m20\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.authorship-breakdown td[data-metric]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown td[data-metric]')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.authorship-breakdown td[data-metric]')\nExpected: \u001b[32m20\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.authorship-breakdown td[data-metric]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown td[data-metric]')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:109:27",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 27,
+                      "line": 109
+                    },
+                    "snippet": "  107 |       });await openToday(page);\n  108 |       const cells=page.locator('.authorship-breakdown td[data-metric]');\n> 109 |       await expect(cells).toHaveCount(field<number>('UI-027','missing_cells'));\n      |                           ^\n  110 |       for(const cell of await cells.all())await expect(cell).toContainText(field<string>('UI-027','value_text'));\n  111 |     }\n  112 |   });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 27,
+                        "line": 109
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.authorship-breakdown td[data-metric]')\nExpected: \u001b[32m20\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.authorship-breakdown td[data-metric]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authorship-breakdown td[data-metric]')\u001b[22m\n\u001b[2m    24 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  107 |       });await openToday(page);\n  108 |       const cells=page.locator('.authorship-breakdown td[data-metric]');\n> 109 |       await expect(cells).toHaveCount(field<number>('UI-027','missing_cells'));\n      |                           ^\n  110 |       for(const cell of await cells.all())await expect(cell).toContainText(field<string>('UI-027','value_text'));\n  111 |     }\n  112 |   });\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:109:27"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:17:04.871Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-027-incomplete--e02e8--cannot-produce-class-rates-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-027-incomplete--e02e8--cannot-produce-class-rates-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-027-incomplete--e02e8--cannot-produce-class-rates-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 27,
+                    "line": 109
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-41d9d307b3afe11063e6",
+          "file": "flow-v2.spec.ts",
+          "line": 99,
+          "column": 7
+        },
+        {
+          "title": "UI-028 supplied labels are escaped and provenance does not claim authentication",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11227,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"<img src=x onerror=\\\"window.__flow_xss=true\\\">\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"<img src=x onerror=\\\"window.__flow_xss=true\\\">\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:117:24",
+                    "location": {
+                      "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                      "column": 24,
+                      "line": 117
+                    },
+                    "snippet": "  115 |     const cell=page.locator('#time .first-pass[data-stage-id=\"ci\"]');\n  116 |     await expect(cell.locator('img')).toHaveCount(field<number>('UI-028','image_count'));\n> 117 |     await expect(cell).toContainText(field<string>('UI-028','injected_label'));\n      |                        ^\n  118 |     for(const text of field<string[]>('UI-028','must_contain'))await expect(cell).toContainText(text);\n  119 |   });\n  120 |   test('UI-029 WIP proposal remains non-authorizing and names selected batch coverage',async({page})=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                        "column": 24,
+                        "line": 117
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#time .first-pass[data-stage-id=\"ci\"]')\nExpected substring: \u001b[32m\"<img src=x onerror=\\\"window.__flow_xss=true\\\">\"\u001b[39m\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#time .first-pass[data-stage-id=\"ci\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#time .first-pass[data-stage-id=\"ci\"]')\u001b[22m\n\n\n  115 |     const cell=page.locator('#time .first-pass[data-stage-id=\"ci\"]');\n  116 |     await expect(cell.locator('img')).toHaveCount(field<number>('UI-028','image_count'));\n> 117 |     await expect(cell).toContainText(field<string>('UI-028','injected_label'));\n      |                        ^\n  118 |     for(const text of field<string[]>('UI-028','must_contain'))await expect(cell).toContainText(text);\n  119 |   });\n  120 |   test('UI-029 WIP proposal remains non-authorizing and names selected batch coverage',async({page})=>{\n    at /private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts:117:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:17:18.496Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-028-supplied-la-29f08-es-not-claim-authentication-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-028-supplied-la-29f08-es-not-claim-authentication-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/private/tmp/s4u-flow-e2e-igLnE2/test-results/flow-v2-UI-028-supplied-la-29f08-es-not-claim-authentication-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/s4u-flow-e2e-igLnE2/tests/flow-v2.spec.ts",
+                    "column": 24,
+                    "line": 117
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-cf8437d2b1751b6b73e3",
+          "file": "flow-v2.spec.ts",
+          "line": 113,
+          "column": 7
+        },
+        {
+          "title": "UI-029 WIP proposal remains non-authorizing and names selected batch coverage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T05:17:31.231Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cce4dfbf695c744f784-f4161545218c817de78a",
+          "file": "flow-v2.spec.ts",
+          "line": 120,
+          "column": 7
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-22T05:15:50.407Z",
+    "duration": 103291.39899999999,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}

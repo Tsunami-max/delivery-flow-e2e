@@ -1,0 +1,10 @@
+{
+  "mutation": "erase initial-attempt selection",
+  "target": "http://127.0.0.1:55813/delivery-flow.html",
+  "original_sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+  "mutant_sha256": "1eee002b955935e6f594267f9f52ee258411ceed8501f7ef2dc47d91c3901c33",
+  "expected_test": "UI-022",
+  "exit_code": 1,
+  "detected": true,
+  "note": "Only this intentional mutant and assertion were exercised. This does not establish universal oracle strength."
+}

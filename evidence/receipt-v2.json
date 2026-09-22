@@ -1,0 +1,909 @@
+{
+  "statement": "Structural validity is not semantic approval. This receipt records what the listed structural checks observed against one candidate at one moment. It does not certify that the figures on the board are correct, that the underlying delivery data is fit for a decision, or that this candidate is approved for release. Business meaning and release authority remain with named humans.",
+  "receipt_version": "ui-receipt-2",
+  "generated_at": "2026-09-22T05:30:55.262Z",
+  "candidate": {
+    "url": "http://127.0.0.1:8874/delivery-flow.html",
+    "resolved_url": "http://127.0.0.1:8874/delivery-flow.html",
+    "http_status": 200,
+    "sha256_html": "795796b882c80533fa23511a4f190094a3e7bc5a036f50176c41f38e51aa6754",
+    "bytes": 84366,
+    "kind": "candidate",
+    "note": "This HTML digest is a post-run fetch, not proof of bytes executed. Per-test response witnesses below bind observed HTML/helper bytes; injected synthetic model variants have their own HTML digests. Localhost does not imply mutation.",
+    "response_witnesses": [
+      {
+        "test": "UI-021 default first-pass fields keep absent initial evidence unassessed",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "795796b882c80533fa23511a4f190094a3e7bc5a036f50176c41f38e51aa6754",
+                "bytes": 84366
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "4f3936525440dde6160e1c48be6789e4d7d92885bd3975463e3f2eb1eda71344",
+                "bytes": 83395
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-022 an initial failure remains failed after a corrected later attempt",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "079eaabbc49d00d864f06518423063af32952ad12f893dbb75509de3fa5873c4",
+                "bytes": 86387
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-023 missing criteria and invalid first-pass denominators stay unassessed",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "44dcd92aa08430be85f05433909a3ed4ba31900ee5094826cf908861a002c91f",
+                "bytes": 86087
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "dae964b707b6e08c36acad0d18b681ca116011c8b32770ff2229d9f8675a9715",
+                "bytes": 86373
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "eb744ed84543a88d57847fb221b731964de4b427b08a91f12bb2e0efe6454802",
+                "bytes": 86368
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "2f86bebac0772099c9336dfaf4b46aa5c7eb4369746c160edc346ca5fa6effcd",
+                "bytes": 86387
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "fbf8c91c9fb622c7b8d6818d9ed6b8272ca825f215caf5372109e64a4e079fc0",
+                "bytes": 86457
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-024 missing authorship inputs retain four unassessed class rows and five analogues",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "795796b882c80533fa23511a4f190094a3e7bc5a036f50176c41f38e51aa6754",
+                "bytes": 84366
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-025 actual authorship grouping computes the five analogues with separate samples",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "079eaabbc49d00d864f06518423063af32952ad12f893dbb75509de3fa5873c4",
+                "bytes": 86387
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-026 conflicting class declarations remain visible as unknown",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "c5647af99082a819339699d70c2f65f0d9223afb75c6d7059f1f7933d9b0f760",
+                "bytes": 86440
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-027 incomplete or mismatched populations cannot produce class rates",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "22a31da29f799cc5ae82a92ffba94860b7d6d6a5111b31bc3b1d3ef62573c0a3",
+                "bytes": 86388
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "71df411489b884ddde03eed097b2987abba6602be1e29d525fe68d8522fbb400",
+                "bytes": 86368
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "eed2b13bef4f8828a41d02253c3a2ab17f5148a865ff68c7846d6bfe9a776d91",
+                "bytes": 86379
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "fd560e25a00b3f819b1f6ee89844c51a8ac9d711af7370f18a6b596f7eb36085",
+                "bytes": 86685
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          },
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "6ae17f8616b04d9a43a1541b61d192df649e0b169a41a7473c1e9bce7967b77c",
+                "bytes": 86387
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-028 supplied labels are escaped and provenance does not claim authentication",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "e692377bfde52a739ae45bc4e1df110d475c159214fe0a6d658a81adf40f3cb8",
+                "bytes": 86436
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": "UI-029 WIP proposal remains non-authorizing and names selected batch coverage",
+        "witnesses": [
+          {
+            "browser": "153.0.8010.53",
+            "assets": [
+              {
+                "url": "http://127.0.0.1:8874/delivery-flow.html",
+                "status": 200,
+                "sha256": "795796b882c80533fa23511a4f190094a3e7bc5a036f50176c41f38e51aa6754",
+                "bytes": 84366
+              },
+              {
+                "url": "http://127.0.0.1:8874/work-policy.js",
+                "status": 200,
+                "sha256": "4256e762024f4ffcc8e3bbc0adcc60a2cbd6fc8983aeea2870c0a34228d93732",
+                "bytes": 7204
+              },
+              {
+                "url": "http://127.0.0.1:8874/flow-profile.js",
+                "status": 200,
+                "sha256": "36f59b0f481120f10059e01a0245970a7bd6ed7e11a44ed96477be24744af5d1",
+                "bytes": 11337
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "profile_version": "ui-flow-profile-v2",
+  "corpus": {
+    "version": "expected-v2",
+    "sha256": "6908510a5412b3eb923356a33394a9033589625ea1e009270c087643652b605f",
+    "author": "Codex under owner autonomous backlog mandate; author-created expectations",
+    "reviewer": "pending",
+    "reviewer_note": "The expected-result corpus has NOT been independently reviewed. Until a named reviewer signs it, these outcomes are self-checked, not independently validated.",
+    "case_count": 29
+  },
+  "environment": {
+    "node": "v25.2.1",
+    "platform": "darwin arm64",
+    "playwright_test": "1.63.0",
+    "browser": [
+      "153.0.8010.53"
+    ],
+    "browser_channel": "chrome",
+    "retries_configured": 0,
+    "workers": 1,
+    "git_commit": "4cb4d7b76ffa8cb1c2f60fb67f506ca003ba766e",
+    "suite_source_sha256": {
+      "expectations/expected-v1.json": "27516bc5642abbb822a8d237d66287a851d3147b09c3c8a0266a03b58af9723e",
+      "expectations/expected-v2.json": "6908510a5412b3eb923356a33394a9033589625ea1e009270c087643652b605f",
+      "expectations/flow-inputs-v2.json": "f77731271110cf469b1ef3d7f6f4d790de7b6f65743c9db4b683879ea7fb89cd",
+      "package-lock.json": "36a2e24d583e2179d46ece901222b14635e708590433931d1c4b9fae78b2ef92",
+      "package.json": "de0cc8a38235c15f920a0a12d644b4e239a40232889fc9e09206dc9bafa14da4",
+      "playwright.config.ts": "89e1e58e046b6f0f8b28fcb0b331830f64935a0b20dedc427549b32eab3c69e0",
+      "scripts/receipt.mjs": "f8d4316794308bcd71209728e93c576f4a9f04de940108b85df5cf911c72c339",
+      "scripts/run-flow-mutated.mjs": "cfbd537f38f6e4e57683eb97e1b0f94c113f4a250b9743b687b74f35c970f052",
+      "scripts/run-mutated.mjs": "d67a29d1c20b0cdf2ef6e4fb3508c514e70c796a94109f8c1bd44c18d0d6d7da",
+      "scripts/test-receipt.mjs": "714638e1a39a6d914c599a1f9b4699f01566d053260ad3d6d593b93b6e5c5abb",
+      "tests/a11y.spec.ts": "355994a7cb09380c5be591921c8da9aaa67f4d52a6729000d61ebe37aed3d907",
+      "tests/corpus.ts": "8c1350e6b02ac637b8e6e6c2154290246cce7ae47f85909d0e05bfd64091a41a",
+      "tests/dashboard.spec.ts": "7170ce79edb01250f2887107d441b0cba36db4a81fb75b18b69f116a9d1f7e4e",
+      "tests/dora.spec.ts": "bfa4cc7d81e9db762bfe2903735fdd3607caaf3acf52ae18506278797a85afe8",
+      "tests/flow-v2.spec.ts": "fc396b74c4ea0721a57ffd6d2f21950294f3d9343028335abae6e8b2e838d799",
+      "tests/not-assessed.spec.ts": "e139398d938643219090f3766b9d5a09b3c991126c545b80611575c228de6af9",
+      "tests/target.ts": "05f3158c2b46158024d88ab9b27d78f604a97ba4c3df94ab8ad5790de5868b0f"
+    },
+    "source_identity_note": "Commit may precede working-tree edits; the explicit file digests identify the suite sources read at receipt time."
+  },
+  "run": {
+    "started_at": "2026-09-22T05:27:36.333Z",
+    "duration_ms": 33493.778000000006,
+    "reporter_expected": 28,
+    "reporter_unexpected": 0,
+    "reporter_skipped": 1,
+    "reporter_flaky": 0
+  },
+  "tally": {
+    "passed": 28,
+    "failed": 0,
+    "cannot-assess": 1,
+    "inapplicable": 0
+  },
+  "cases": [
+    {
+      "id": "UI-001",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Demo provenance banner is present",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 731,
+      "bound_test": "UI-001 the demo provenance banner is present"
+    },
+    {
+      "id": "UI-002",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "All ten screens render with a verdict sentence",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 1204,
+      "bound_test": "UI-002 all ten screens render a verdict sentence"
+    },
+    {
+      "id": "UI-003",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Delivery today verdict says none of the landings carries a verdict",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 697,
+      "bound_test": "UI-003 Delivery today says none of the landings carries a verdict"
+    },
+    {
+      "id": "UI-004",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Rework share dial reads the literal state, never a number",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 628,
+      "bound_test": "UI-004 the Rework share dial reads the literal state, never a number"
+    },
+    {
+      "id": "UI-005",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Business intent shows exactly six named blockers, one of them an open conflict",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 938,
+      "bound_test": "UI-005 Business intent shows exactly six blockers with one open conflict"
+    },
+    {
+      "id": "UI-006",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Decisions screen reports 7 mandates with a receipt and 4 refuted",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 664,
+      "bound_test": "UI-006 Decisions reports 7 mandates with a receipt and 4 refuted"
+    },
+    {
+      "id": "UI-007",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Every dial carries exactly one provenance chip from the approved vocabulary",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 850,
+      "bound_test": "UI-007 every dial carries exactly one provenance chip from the vocabulary"
+    },
+    {
+      "id": "UI-008",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Every screen carries at least one chart",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 841,
+      "bound_test": "UI-008 every screen carries at least one chart"
+    },
+    {
+      "id": "UI-009",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Trace picker switches the heading and the state line",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 2332,
+      "bound_test": "UI-009 the trace picker switches the heading and the state line"
+    },
+    {
+      "id": "UI-010",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Theme toggle flips data-theme and returns",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 673,
+      "bound_test": "UI-010 the theme toggle flips data-theme and returns"
+    },
+    {
+      "id": "UI-011",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Every details.more fold has a summary reachable and operable by keyboard",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 1950,
+      "bound_test": "UI-011 every details.more fold is reachable and operable by keyboard"
+    },
+    {
+      "id": "UI-012",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "No rendered text leaks undefined or NaN",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 510,
+      "bound_test": "UI-012 no rendered text leaks undefined or NaN"
+    },
+    {
+      "id": "UI-013",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "No not-assessed state badge renders a numeral",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 569,
+      "bound_test": "UI-013 no not-assessed state badge renders a numeral"
+    },
+    {
+      "id": "UI-014",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Left rail links resolve to the ten screen ids",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 885,
+      "bound_test": "UI-014 every left-rail link resolves to a screen that exists"
+    },
+    {
+      "id": "UI-015",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "Accessibility smoke: no serious or critical axe violations beyond the recorded baseline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 4012,
+      "bound_test": "UI-015 a11y smoke: no serious or critical axe violations beyond the recorded baseline"
+    },
+    {
+      "id": "UI-016",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Offline resilience: the board renders with no third-party network access",
+      "outcome": "cannot-assess",
+      "detail": "The candidate is a hosted page served over the network. This harness cannot establish a network-disabled condition that still delivers the candidate, and no offline artefact of the candidate is approved for this corpus. The check is recorded as cannot-assess rather than passed, skipped or omitted.",
+      "duration_ms": 508,
+      "bound_test": "UI-016 the board renders with no third-party network access"
+    },
+    {
+      "id": "UI-017",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Delivery today shows exactly five delivery dials, one per DORA software delivery metric",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 582,
+      "bound_test": "UI-017 Delivery today shows exactly five delivery dials, one per DORA metric"
+    },
+    {
+      "id": "UI-018",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Change fail share and Time to fix read the literal state with a reason, never a number",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 949,
+      "bound_test": "UI-018 Change fail share and Time to fix read the literal state with a reason"
+    },
+    {
+      "id": "UI-019",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "The DORA mapping sits behind a fold on Delivery today and names all five DORA metrics as analogues",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 646,
+      "bound_test": "UI-019 the DORA mapping sits behind a fold and names all five metrics as analogues"
+    },
+    {
+      "id": "UI-020",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "The Cost screen names cost per accepted change and leaves it not assessed",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 568,
+      "bound_test": "UI-020 the Cost screen names cost per accepted change and leaves it not assessed"
+    },
+    {
+      "id": "UI-021",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Default first-pass fields retain missing initial-assessment evidence",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 1027,
+      "bound_test": "UI-021 default first-pass fields keep absent initial evidence unassessed"
+    },
+    {
+      "id": "UI-022",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "An initial failure followed by success is not first-pass success",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 712,
+      "bound_test": "UI-022 an initial failure remains failed after a corrected later attempt"
+    },
+    {
+      "id": "UI-023",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Missing criterion and empty or insufficient first-pass denominators stay unassessed",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 1544,
+      "bound_test": "UI-023 missing criteria and invalid first-pass denominators stay unassessed"
+    },
+    {
+      "id": "UI-024",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Default authorship split keeps all four classes and five analogues unassessed",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 955,
+      "bound_test": "UI-024 missing authorship inputs retain four unassessed class rows and five analogues"
+    },
+    {
+      "id": "UI-025",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Actual grouping derives all five analogues and states class provenance",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 1577,
+      "bound_test": "UI-025 actual authorship grouping computes the five analogues with separate samples"
+    },
+    {
+      "id": "UI-026",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "Conflicting declarations become unknown and never disappear from the population",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 720,
+      "bound_test": "UI-026 conflicting class declarations remain visible as unknown"
+    },
+    {
+      "id": "UI-027",
+      "surface": "UI",
+      "kind": "not-assessed",
+      "title": "Incomplete or mismatched delivery populations never produce rates or zero-frequency claims",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 3245,
+      "bound_test": "UI-027 incomplete or mismatched populations cannot produce class rates"
+    },
+    {
+      "id": "UI-028",
+      "surface": "UI",
+      "kind": "adverse",
+      "title": "Authorship and first-pass markup escapes supplied labels and retains scope limits",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 598,
+      "bound_test": "UI-028 supplied labels are escaped and provenance does not claim authentication"
+    },
+    {
+      "id": "UI-029",
+      "surface": "UI",
+      "kind": "benign",
+      "title": "Selected WIP policy retains non-authorizing proposal and batch population coverage",
+      "outcome": "passed",
+      "detail": null,
+      "duration_ms": 624,
+      "bound_test": "UI-029 WIP proposal remains non-authorizing and names selected batch coverage"
+    }
+  ],
+  "unbound_tests": [],
+  "open_defects_in_candidate": [
+    {
+      "id": "A11Y-001",
+      "surface": "UI",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "nodes_observed": 34,
+      "status": "fixed",
+      "note": "Observed on the candidate landing view; not fixed, not waived.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
+    },
+    {
+      "id": "A11Y-002",
+      "surface": "UI",
+      "rule": "summary-name",
+      "impact": "serious",
+      "nodes_observed": 22,
+      "status": "fixed",
+      "note": "details summaries render their label through CSS content, leaving no accessible name for assistive technology.",
+      "fixed_in": "s4u-methodology PR #70, master 4161ec2 (demo: aria-label on every summary; semantic text colours darkened to >= 4.5:1)",
+      "verified": "2026-09-16: axe probe on the live candidate reports 0 nodes for this rule; remaining findings are moderate (region) only"
+    }
+  ],
+  "corpus_amendments": [
+    {
+      "date": "2026-09-16",
+      "cases": [
+        "UI-014"
+      ],
+      "reason": "Expectation was over-stated: it assumed all ten rail links are exposed without interaction. Corrected to the candidate's fold-based rail design after direct observation. No assertion was weakened; the test now performs the interaction a user would."
+    },
+    {
+      "date": "2026-09-16",
+      "cases": [
+        "UI-015"
+      ],
+      "reason": "Expectation of zero serious/critical axe violations was not met by the candidate. Rather than deleting the check or marking it passed, the two observed violations are recorded as named open defects and baselined, so the gate now detects NEW serious violations. The open defects are carried into every receipt."
+    },
+    {
+      "date": "2026-09-16",
+      "case": "UI-015",
+      "change": "baselined_serious_violations: [color-contrast, summary-name] -> []",
+      "reason": "Both defects were fixed in the candidate (s4u-methodology PR #70, 4161ec2) and verified absent by an axe probe on the live page; a baseline that no longer describes the candidate would let a regression hide behind it."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-017",
+        "UI-018",
+        "UI-019",
+        "UI-020"
+      ],
+      "reason": "New cases authored before the candidate change was built: the owner found that the redesign had dropped the DORA mapping the original board carried. Run against the unchanged live candidate first, where they are expected to fail."
+    },
+    {
+      "date": "2026-09-17",
+      "cases": [
+        "UI-011",
+        "UI-013"
+      ],
+      "reason": "Pinned counts raised for a planned candidate change, before it was built: one new fold on Delivery today (12 to 13) and three not-assessed state cells in its mapping table (198 to 201). No assertion was weakened."
+    },
+    {
+      "date": "2026-09-22",
+      "cases": [
+        "UI-021",
+        "UI-022",
+        "UI-023",
+        "UI-024",
+        "UI-025",
+        "UI-026",
+        "UI-027",
+        "UI-028",
+        "UI-029"
+      ],
+      "reason": "Prospective flow-profile-v2 extension pinned before adapter implementation. UI-029 checks the already implemented WIP prerequisite. Author-created and not independently reviewed. UI-013 remains 201 because its selector is .state.na, not all .state badges."
+    }
+  ],
+  "not_claimed": [
+    "semantic correctness of any figure on the board",
+    "fitness of the underlying delivery data for any decision",
+    "coverage of surfaces other than the UI",
+    "candidate response-byte witnesses for older tests without attachments",
+    "release readiness or approval of the candidate"
+  ]
+}
